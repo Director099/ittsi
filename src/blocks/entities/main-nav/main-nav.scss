@@ -1,0 +1,105 @@
+@import "./data-has-hover";
+
+.main-nav {
+  @include ul-none;
+
+  display: flex;
+  height: 100%;
+}
+
+.main-nav__item {
+  position: relative;
+  z-index: 1;
+
+  padding: 0 12.5px;
+}
+
+.main-nav__item:hover .main-nav__link::after {
+  opacity: 1;
+}
+
+.main-nav__item:hover .main-nav__submenu {
+  display: block;
+}
+
+.main-nav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: #000;
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    display: block;
+    bottom: 25%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $black;
+    z-index: 2;
+    transition: opacity $time ease-in-out;
+    opacity: 0;
+  }
+}
+
+.main-nav__submenu {
+  position: fixed;
+  top: 60px; // Todo Переменная
+  left: 0;
+  display: none;
+  width: 100%;
+  max-height: calc(100vh - 60px); // Todo Переменная
+  background-color: $white;
+  overflow-y: auto;
+
+  padding: 28px 0 28px 28px;
+}
+
+.main-nav__row {
+  display: flex;
+  gap: 0 30px;
+}
+
+.main-nav__column {
+  @include ul-none;
+  max-width: 200px;
+}
+
+.main-nav__sub-link {
+  display: inline-block;
+
+  color: $black;
+  margin-bottom: 12px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+  transition: color $time;
+
+  &--head {
+    margin-bottom: 16px;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &--dashed {
+    margin-top: 2px;
+  }
+
+  &--dashed span {
+    border-bottom: 1px dashed;
+    line-height: 1.3;
+  }
+
+  &:hover {
+    color: #999; //Todo цввет
+  }
+}

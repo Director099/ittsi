@@ -1,0 +1,6 @@
+mixin category-preview({img, title})
+  a.category-preview(href="#")
+    img.category-preview__img(src=`img/content/category/category-${img}.jpg`, alt=title)
+    .category-preview__info
+      span.category-preview__title= title
+      span.category-preview__link Смотреть

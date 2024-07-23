@@ -1,0 +1,241 @@
+.page-footer__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px 15px 0;
+  position: relative;
+
+  @media (min-width: $screen-lg) {
+    padding: 24px 28px 0;
+  }
+}
+
+.page-footer__grid-available {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  order: 3;
+
+  @media (min-width: $screen-lg) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    padding: 31px 0px;
+    order: initial;
+  }
+}
+
+.page-footer__nav {
+  @media (min-width: $screen-lg) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 18px 0;
+    border-top: 1px solid #e4e4e4;
+  }
+}
+
+.page-footer__nav-title {
+  position: relative;
+  padding: 18px 20px 18px 0;
+  margin-bottom: -1px;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+
+
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $black;
+
+  &::after,
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 24px;
+    height: 1px;
+    background-color: #999;
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  &::before {
+    transform: rotate(-90deg);
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-bottom: 18px;
+    padding: 0;
+    border: none;
+  }
+}
+
+
+.page-footer__nav-wrap.is-active .page-footer__nav-title::before {
+  transform: rotate(0deg);
+}
+
+.page-footer__nav-list {
+  @include ul-none;
+
+  overflow: hidden;
+  transition: $time;
+  max-height: 0;
+  padding-left: 16px;
+
+  @media (min-width: $screen-lg) {
+    max-height: initial;
+    display: grid;
+    gap: 12px;
+    padding: 0;
+  }
+}
+
+.page-footer__nav-link {
+  position: relative;
+  display: block;
+  padding: 18px 20px 18px 0;
+  margin-bottom: -1px;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+
+
+  font-weight: 300;
+  line-height: 18px;
+  transition: $time;
+  color: inherit;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='8' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 13l6-6-6-6' stroke='%23D6D6D6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  &:hover {
+    color: #999;
+  }
+
+  @media (min-width: $screen-lg) {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+}
+
+.page-footer__contact-link {
+  display: flex;
+  gap: 5px;
+  font-weight: 300;
+  line-height: 18px;
+  margin: 0;
+
+  a {
+    font-weight: 500;
+    color: inherit;
+  }
+}
+
+.page-footer__btn-link {
+  cursor: pointer;
+  max-width: 227px;
+  width: 100%;
+  padding: 8.5px;
+  margin-bottom: 12px;
+}
+
+.page-footer__module-time {
+  margin: 0;
+}
+
+.page-footer__module-time span {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  color: #999;
+}
+
+.page-footer__under {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  color: #999;
+  border-top: 1px solid #f7f7f7;
+  padding: 19.5px 15px;
+  order: 4;
+
+  p {
+    margin: 0;
+  }
+
+  @media (min-width: $screen-lg) {
+    order: initial;
+  }
+}
+
+.page-footer__col {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 0;
+  border-top: 1px solid #f7f7f7;
+
+  @media (min-width: $screen-lg) {
+    display: block;
+    border: none;
+    padding: 0;
+    width: auto;
+  }
+}
+
+.page-footer__contact-wrap {
+
+  overflow: hidden;
+  transition: $time;
+  max-height: 0;
+
+  @media (min-width: $screen-lg) {
+    max-height: initial;
+  }
+}
+
+.page-footer__contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 22px 0;
+  gap: 22px;
+
+  @media (min-width: $screen-lg) {
+    align-items: initial;
+    justify-content: initial;
+    text-align: initial;
+    padding: 0;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,34 @@
+.category-preview {
+  position: relative;
+  color: inherit;
+}
+
+.category-preview__info {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: calc(100% - 32px);
+  max-width: 144px;
+  padding: 10px;
+  background-color: $white;
+  text-align: center;
+}
+
+.category-preview__title {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.category-preview__link {
+  position: relative;
+  text-align: center;
+  font-size: 12px;
+  line-height: 12px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid $black;
+}

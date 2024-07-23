@@ -1,0 +1,15 @@
+.link-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+
+  font-size: 13px;
+  position: relative;
+  z-index: 2;
+  color: inherit;
+  white-space: nowrap;
+
+  svg {
+    display: block;
+  }
+}

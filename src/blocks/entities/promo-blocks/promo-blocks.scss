@@ -1,0 +1,18 @@
+.promo-blocks {
+  gap: 28px;
+  margin: 0 -15px;
+
+  @media (min-width: $screen-lg) {
+    margin: 0;
+  }
+}
+
+.promo-blocks__link {
+  display: block;
+}
+
+.promo-blocks__link--ident {
+  @media (min-width: $screen-lg) {
+    margin: 0 -28px;
+  }
+}

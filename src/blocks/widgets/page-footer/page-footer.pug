@@ -1,0 +1,37 @@
+include ./constans
+
+mixin page-footer()
+  footer.page-footer
+    .page-footer__container
+      .page-footer__grid-available
+        .page-footer__col
+          +socials
+        .page-footer__col
+          +payment
+      +subscribe.page-footer__subscribe
+      .page-footer__nav(data-accordion="parent" data-single="" data-destroy="(max-width: 1023px)")
+        each item in footerNav
+          .page-footer__nav-wrap(data-accordion="element")
+            h3.page-footer__nav-title(data-accordion="button")= item.title
+            ul.page-footer__nav-list(data-accordion="content")
+              each itemLinks in item.links
+                li.page-footer__nav-item
+                  a.page-footer__nav-link(href="#")= itemLinks
+        .page-footer__nav-wrap(data-accordion="element")
+          h3.page-footer__nav-title(data-accordion="button") Контакты
+          .page-footer__contact-wrap(data-accordion="content")
+            .page-footer__contact-content
+              p.page-footer__contact-link
+                span Телефон:
+                a(href="tel:89585557929") 8 958 555-79-29
+              p.page-footer__module-time
+                a.btn.btn--light.page-footer__btn-link(href="https://t.me/tg_ittsi" target="_blank") Написать в Telegram
+                span Ежедневно с 10:00 до 22:00 (Мск) #[br] Ответим на любой вопрос
+              p.page-footer__contact-link
+                span E-mail:
+                a(href="mailto:hello@toptop.ru") hello@toptop.ru
+              p.page-footer__contact-link
+                span Сотрудничество:
+                a(href="mailto:pr@toptop.ru") pr@toptop.ru
+      .page-footer__under
+        p ©  2009-2024 ITTSI.RU Все права защищены

@@ -1,0 +1,5 @@
+mixin link-icon({svg, width=20, height=20})
+  a.link-icon&attributes(attributes)
+    svg(width=width, height=height)
+      use(href=`img/symbols.svg#icon-${svg}`)
+    span.link-icon__text : 4

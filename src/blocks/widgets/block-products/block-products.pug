@@ -1,0 +1,10 @@
+mixin block-products({title, subTitle, btnText})
+  .block-products&attributes(attributes)
+    header.block-products__header
+      h2.block-products__title= title
+      if(!!subTitle)
+        p.block-products__sub-title= subTitle
+    block
+    if(!!btnText)
+      footer.block-products__footer
+        a.btn.btn--dark.block-products__btn= btnText

@@ -1,0 +1,36 @@
+
+mixin preview(item)
+  -
+    const {
+      title = "Бейсболка из 100% хлопка",
+      link = "#",
+      priceCurrent = "7 690",
+      priceSale = "5 768",
+      img,
+      hasColors,
+      btnFavoriteActive = false,
+      btnFavoriteCount = 123
+    } = item
+  article.preview&attributes(attributes)
+    button.preview__btn-favorite(type="button" class=btnFavoriteActive && 'active')
+      span.preview__heart
+        span.preview__heart-count= btnFavoriteCount
+    a.preview__link(href="#")
+      header.preview__swiper-wrap
+        .swiper(data-preview-slider="")
+          .swiper-wrapper
+            - for(let i = 1; i < 8; i++)
+              .swiper-slide.preview__img
+                img(src=`img/content/preview-${img}/prev-${i}.jpg` alt=title)
+          .swiper-pagination.preview__pagination
+        .preview__colors
+          if(!!hasColors)
+            span.preview__circle(style="background-color: #b3f1fc")
+            span.preview__circle(style="background-color: #5a8fd5")
+      footer.preview__footer
+        h3.preview__title= title
+        .preview__price
+          span.preview__price-text(class=!!priceSale && 'preview__price-text--cut')= `${priceCurrent} ₽`
+          if (!!priceSale)
+            span.preview__price-text.preview__price-text--sale= `${priceSale} ₽`
+              span.preview__price-percent (-25%)

@@ -1,0 +1,38 @@
+@import "../blocks/shared/utils-css/constans/variables";
+@import "../blocks/shared/utils-css/mixins/grid-mixins";
+
+@import "../blocks/shared/utils-css/fonts/fonts";
+
+@import "../blocks/shared/utils-css/global/global";
+@import "../blocks/shared/utils-css/global/custom-scrollbar";
+
+@import "../blocks/shared/utils-css/grid-tpl/grid-tpl";
+@import "../blocks/shared/utils-css/display/display";
+@import "../blocks/shared/utils-css/visibility-hidden/visibility-hidden";
+@import "../blocks/shared/utils-css/has-danger/has-danger";
+@import "../blocks/shared/utils-css/mixins/mixins";
+
+@import "../blocks/shared/ui/page/page";
+@import "../blocks/shared/ui/container/container";
+@import "../blocks/shared/ui/btn/btn";
+@import "../blocks/shared/ui/logo/logo";
+@import "../blocks/shared/ui/link-icon/link-icon";
+@import "../blocks/shared/ui/form/form";
+@import "../blocks/shared/ui/field-text/field-text";
+@import "../blocks/shared/ui/field-checkbox/field-checkbox";
+@import "../blocks/shared/ui/dropdown/dropdown";
+
+@import "../blocks/entities/main-nav/main-nav";
+@import "../blocks/entities/search-form/search-form";
+@import "../blocks/entities/promo-blocks/promo-blocks";
+@import "../blocks/entities/preview/preview";
+@import "../blocks/entities/category-preview/category-preview";
+@import "../blocks/entities/socials/socials";
+@import "../blocks/entities/payment/payment";
+@import "../blocks/entities/subscribe/subscribe";
+
+@import "../blocks/widgets/page-header/page-header";
+@import "../blocks/widgets/page-footer/page-footer";
+@import "../blocks/widgets/block-products/block-products";
+
+

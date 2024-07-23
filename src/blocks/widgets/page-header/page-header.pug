@@ -1,0 +1,18 @@
+mixin page-header()
+  header.page-header
+    +logo('/').page-header__logo
+    .page-header__navigation
+      +main-nav.page-header__main-nav.d-none.d-lg-block
+      +search-form.page-header__search
+    ul.page-header__actions
+      li.page-header__actions-item.d-none.d-lg-block
+        a.page-header__actions-link(href="#") Войти
+      li.page-header__actions-item
+        +link-icon({
+          svg: 'heart'
+        }).page-header__actions-link(href="#")
+      li.page-header__actions-item
+        +link-icon({
+          svg: 'bag-2',
+          height: 19
+        }).page-header__actions-link(href="#")

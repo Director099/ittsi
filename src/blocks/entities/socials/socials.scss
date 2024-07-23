@@ -1,0 +1,15 @@
+.socials {
+  @include ul-none;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.socials__link {
+  display: block;
+  filter: brightness(.65);
+
+  svg {
+    display: block;
+  }
+}

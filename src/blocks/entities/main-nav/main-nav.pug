@@ -1,0 +1,18 @@
+include ./mock
+
+mixin main-nav
+  ul.main-nav&attributes(attributes)
+    each itemMenu in mainNav
+      - const hasAttribute = !!itemMenu.subItemColumns;
+      li.main-nav__item(data-has-hover=hasAttribute ? true : false)
+        a.main-nav__link(href="#")= itemMenu.mainItem
+        if(hasAttribute)
+          .main-nav__submenu
+            .main-nav__row
+              each container in itemMenu.subItemColumns
+                ul.main-nav__column
+                  each subMenu in container
+                    li.main-nav__column-item
+                      a.main-nav__sub-link(href="#" class=subMenu.linkModified)
+                        span= subMenu.linkTitle
+

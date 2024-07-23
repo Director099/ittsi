@@ -1,0 +1,32 @@
+mixin subscribe
+  .subscribe&attributes(attributes)
+    .subscribe__column
+      h3.subscribe__title Подпишитесь на рассылки
+      .subscribe__desc
+        p Получайте советы по стилю и будьте в курсе новинок и спецпредложений.
+    .subscribe__column
+      form.subscribe__form(data-form="")
+        .subscribe__form-row
+          +field-text({
+            attrs: {
+              class: 'subscribe__field',
+              placeholder: 'Email',
+              type: "email",
+              required: true,
+              "data-pristine-email-message": " ",
+              'data-pristine-required-message': " ",
+            }
+          }).subscribe__field-text
+          button.subscribe__btn(data-form-btn="") Подписаться
+            svg.d-none.d-lg-block(width="21", height="18")
+              use(href="img/symbols.svg#icon-send")
+        +field-checkbox([
+          {
+            title: 'Нажимая на кнопку, вы даёте согласие на обработку своих персональных данных',
+            attrs: {
+              name: 'check',
+              checked: true,
+              required: true,
+            }
+          },
+        ]).subscribe__checkbox

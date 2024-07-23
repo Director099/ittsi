@@ -1,0 +1,63 @@
+.page-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding: 0 15px;
+  background-color: rgba($white, 97%);
+  z-index: 9;
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background-color: #f7f7f7; //Todo цвет
+  }
+
+  @media (min-width: $screen-lg) {
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    height: 60px; //TODO в переменную
+  }
+}
+
+.page-header__navigation {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  height: 100%;
+  padding-right: 40px;
+
+  margin-left: 27.5px;
+}
+
+.page-header__actions {
+  @include ul-none;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-left: 7px;
+}
+
+.page-header__actions-link {
+  padding: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  text-transform: uppercase;
+
+  color: inherit;
+}
+
+.page-header__search {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+

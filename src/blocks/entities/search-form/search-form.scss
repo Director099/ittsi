@@ -1,0 +1,88 @@
+.search-form {
+  position: relative;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 27px;
+  height: calc(100% - 1px);
+  z-index: 4;
+  transition: width $time ease;
+  transform-origin: 100% 0;
+  overflow: hidden;
+
+  background-color: rgba(255, 255, 255, .97);
+
+  &:hover {
+    width: 100%;
+  }
+}
+
+.search-form__btn {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-form__field {
+  width: 100%;
+  margin-left: 3px;
+}
+
+.search-form__field .field-text__input {
+  flex: 1 0 auto;
+  background-color: transparent;
+  border: none;
+  //opacity: 0;
+  color: $black;
+  font-family: $font-family;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 300;
+  transition: opacity .1s;
+  -webkit-appearance: none;
+
+  padding: 0;
+}
+
+.search-form__field ul {
+  @include ul-none;
+
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  max-height: calc(100vh - 60px);
+  padding: 0 0 24px 238px;
+  background-color: $white;
+  transition: height .2s, max-height .2s;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 9;
+}
+
+.search-form__field .link-search {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  border-bottom: 1px solid #f7f7f7;
+  transition: background-color $time;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 300;
+  color: initial;
+  max-width: 800px;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10' viewBox='0 0 12 10' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.8594 4.6698C12.0469 4.85216 12.0469 5.14784 11.8594 5.3302L7.05941 10L6.38059 9.33959L10.3612 5.46698L-2.38969e-07 5.46698L-1.98145e-07 4.53302L10.3612 4.53302L6.38059 0.660409L7.05941 -2.1596e-07L11.8594 4.6698Z' fill='%23D6D6D6'/%3E%3C/svg%3E");
+}
+
+.search-form__field .link-search mark {
+  color: $black;
+  font-weight: 700;
+  background: transparent;
+}

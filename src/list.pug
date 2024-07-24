@@ -5,17 +5,32 @@ block meta
 block header
   +page-header()
 block content
+  style.
+    fieldset {
+      border: 1px solid #000;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+
+    main {
+      padding-bottom: 40px;
+    }
+
+    fieldset li {
+      margin: 10px 0;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
+    }
+
   main
-    ul
-      li
-        a(href='/') Главная
-      //- li
-      //-   a(href='/') Главная
-      //- li
-      //-   a(href='/') Главная
-      //- li
-      //-   a(href='/') Главная
-      //- li
-      //-   a(href='/') Главная
+    fieldset
+      ol
+        each item in pages
+          li
+            a(href=item.href)= item.text
 block footer
   +page-footer()

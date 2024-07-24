@@ -23,13 +23,13 @@ mixin page-footer()
             .page-footer__contact-content
               p.page-footer__contact-link
                 span Телефон:
-                a(href="tel:89585557929") 8 958 555-79-29
+                a(href=numberPhone.href)= numberPhone.text
               p.page-footer__module-time
                 a.btn.btn--light.page-footer__btn-link(href="https://t.me/tg_ittsi" target="_blank") Написать в Telegram
                 span Ежедневно с 10:00 до 22:00 (Мск) #[br] Ответим на любой вопрос
               p.page-footer__contact-link
                 span E-mail:
-                a(href="mailto:hello@toptop.ru") hello@toptop.ru
+                a(href=contactEmail.href)= contactEmail.text
               p.page-footer__contact-link
                 span Сотрудничество:
                 a(href="mailto:pr@toptop.ru") pr@toptop.ru

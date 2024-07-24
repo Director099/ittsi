@@ -10,10 +10,10 @@ mixin subscribe
           +field-text({
             attrs: {
               class: 'subscribe__field',
-              placeholder: 'Email',
-              type: "email",
+              placeholder: formFilelds.email.attrs.placeholder,
+              type: formFilelds.email.attrs.type,
               required: true,
-              "data-pristine-email-message": " ",
+              "data-pristine-email-message": formFilelds.email.attrs["data-pristine-email-message"],
               'data-pristine-required-message': " ",
             }
           }).subscribe__field-text

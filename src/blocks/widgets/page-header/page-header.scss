@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   display: flex;
-  padding: 0 15px;
+  flex-wrap: wrap;
   background-color: rgba($white, 97%);
   z-index: 9;
 
@@ -22,8 +22,41 @@
   @media (min-width: $screen-lg) {
     align-items: center;
     justify-content: space-between;
+    flex-wrap: nowrap;
     padding: 0 28px;
     height: 60px; //TODO в переменную
+  }
+}
+
+.page-header__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 22px;
+  padding: 7px 15px;
+  border-bottom: 1px solid #f7f7f7;
+  border-top: 1px solid #f7f7f7;
+
+  @media (min-width: $screen-lg) {
+    gap: 0;
+    border: none;
+    padding: 0;
+    height: 100%;
+  }
+}
+
+.page-header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+
+  @media (min-width: $screen-lg) {
+    display: block;
+    width: auto;
+    padding: 0;
   }
 }
 
@@ -32,18 +65,21 @@
   display: flex;
   align-items: center;
   flex-grow: 1;
-  height: 100%;
   padding-right: 40px;
-
   margin-left: 27.5px;
+  height: 100%;
 }
 
 .page-header__actions {
   @include ul-none;
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 22px;
   margin-left: 7px;
+
+  @media (min-width: $screen-lg) {
+    gap: 7px;
+  }
 }
 
 .page-header__actions-link {

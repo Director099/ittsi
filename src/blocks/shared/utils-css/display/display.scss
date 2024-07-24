@@ -59,6 +59,12 @@
   display: flex !important;
 }
 
+.d-lg-flex {
+  @media (min-width: $screen-lg) {
+    display: flex !important;
+  }
+}
+
 .d-xl-flex {
   @media (min-width: $screen-xl) {
     display: flex !important;

@@ -1,0 +1,29 @@
+extends pug/layout.pug
+
+block var
+  - const pageClassName = 'info-page'
+
+block meta
+  title= pages.pageInfo.text
+block header
+  +page-header()
+block content
+  -
+    const cardsInfo = [
+      pages.pageShop,
+      pages.pageDelivery,
+      pages.pageReturnPolicy,
+      pages.pagePayment,
+      pages.pageDimensions,
+      pages.pageFAQ,
+      pages.pageContact,
+    ]
+
+  .info-page__grid
+    +info-nav
+    .d-none.d-lg-block
+      section.info-page__card-grid
+        each item in cardsInfo
+          +card-info(item.text, item.href)
+block footer
+  +page-footer()

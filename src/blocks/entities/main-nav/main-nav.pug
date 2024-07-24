@@ -4,8 +4,10 @@ mixin main-nav
   ul.main-nav&attributes(attributes)
     each itemMenu in mainNav
       - const hasAttribute = !!itemMenu.subItemColumns;
+      - const mainLink = !!itemMenu.href ? itemMenu.href : pages.catalog.href;
+      - const targetBlank = !!itemMenu.target ? "_blank" : false;
       li.main-nav__item(data-has-hover=hasAttribute ? true : false)
-        a.main-nav__link(href="#")= itemMenu.mainItem
+        a.main-nav__link(href=mainLink, target=targetBlank)= itemMenu.mainItem
         if(hasAttribute)
           .main-nav__submenu
             .main-nav__row

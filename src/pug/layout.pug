@@ -1,6 +1,9 @@
 include mixins.pug
 
 doctype html
+
+block var
+
 html.page(lang='ru')
 
   head
@@ -42,7 +45,7 @@ html.page(lang='ru')
   body.page__inner
     block header
       p «шапка»
-    main.page__content
+    main.page__content(class=pageClassName)
       block content
         p содержимое страницы
     block footer

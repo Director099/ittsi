@@ -12,6 +12,16 @@ block content
       border-radius: 5px;
     }
 
+    legend {
+      display: inline-block;
+      width: auto;
+      font-size: 20px;
+      margin-left: 19px;
+      margin-right: 5px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
     main {
       padding-bottom: 40px;
     }
@@ -27,10 +37,33 @@ block content
     }
 
   main
+    - const pageMain = (elem) => ['index.html', '404.html'].includes(elem["href"]);
+    - const pageOrder = (elem) => elem.href.indexOf('page');
+    - const pageCatalogs = (elem) => elem.href.indexOf('catalog');
+    - const pageBasket = (elem) => elem.href.indexOf('basket');
+
     fieldset
+      legend Внутр. стр.
       ol
         each item in pages
-          li
-            a(href=item.href)= item.text
+          if(!pageOrder(item) || pageMain(item))
+            li
+              a(href=item.href)= item.text
+
+    fieldset
+      legend Каталог
+      ol
+        each item in pages
+          if(!pageCatalogs(item))
+            li
+              a(href=item.href)= item.text
+
+    fieldset
+      legend Корзина
+      ol
+        each item in pages
+          if(!pageBasket(item))
+            li
+              a(href=item.href)= item.text
 block footer
   +page-footer()

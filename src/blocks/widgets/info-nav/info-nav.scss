@@ -1,0 +1,38 @@
+.info-nav {
+  background-color: $white;
+
+  @media (min-width: $screen-lg) {
+    position: sticky;
+    top: 80px;
+    border-radius: 4px;
+    padding: 4px;
+  }
+}
+
+.info-nav__list {
+  @include ul-none;
+}
+
+.info-nav__title {
+  color: $black;
+  font-size: 18px;
+  letter-spacing: 1.4px;
+  font-weight: 400;
+  padding: 29.5px 15px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.info-nav__link {
+  display: flex;
+  width: 100%;
+  margin-top: -1px;
+  padding: 20.5px 15px;
+  transition: $time;
+  color: inherit;
+  border-top: 1px solid #f7f7f7;
+
+  &:hover {
+    background-color: #f7f7f7;
+  }
+}

@@ -14,14 +14,13 @@ block content
       pages.pageDelivery,
       pages.pageReturnPolicy,
       pages.pagePayment,
-      pages.pageDimensions,
       pages.pageFAQ,
       pages.pageContact,
     ]
 
   .info-page__grid
     +info-nav
-    .d-none.d-lg-block
+    .info-page__content.d-none.d-lg-block
       section.info-page__card-grid
         each item in cardsInfo
           +card-info(item.text, item.href)

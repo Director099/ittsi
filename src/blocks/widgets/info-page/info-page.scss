@@ -9,6 +9,12 @@
   }
 }
 
+.info-page__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .info-page__grid {
   @media (min-width: $screen-lg) {
     display: grid;

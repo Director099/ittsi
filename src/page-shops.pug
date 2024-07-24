@@ -8,28 +8,13 @@ block meta
 block header
   +page-header()
 block content
-  -
-    const accordionList = [
-      {
-        title: 'ITTSI ЦТиР «МИР»',
-        tplContent: `
-          <strong>АДРЕС:</strong>
-          <p>Уфа, проспект Октября 4/1,  ЦТиР «МИР», 2 УРОВЕНЬ, Южная галерея</p>
-          <strong>ГРАФИК РАБОТЫ:</strong>
-          <p>ПН - ВС  10:00 - 23:00</p>
-          <strong>ТЕЛЕФОН:</strong>
-          <a href="tel:8(937)287-88-88">8 (937) 287-88-88</a>
-        `
-      }
-    ]
-
   .info-page__grid
     +page-back
     +info-nav.d-none.d-lg-block
-    +content-block('Уфа')
-      +accordion({
-        list: accordionList,
-        firstActive: true
-      }).content-block__accordion
+    .info-page__content
+      +content-block('Уфа')
+        p #[strong АДРЕС:] Уфа, проспект Октября 4/1,  ЦТиР «МИР», 2 УРОВЕНЬ, Южная галерея
+        p #[strong ГРАФИК РАБОТЫ:] ПН - ВС  10:00 - 23:00
+        p #[strong ТЕЛЕФОН:] #[a(href="tel:8(937)287-88-88") 8 (937) 287-88-88]
 block footer
   +page-footer()

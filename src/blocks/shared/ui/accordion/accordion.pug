@@ -1,0 +1,25 @@
+mixin accordion({count=false, list=[], classElement, firstActive, scrollId})
+  .accordion(data-accordion="parent")&attributes(attributes)
+    each item, i in list
+      - const countList = count ? `${i + 1}. ` : '';
+      - const isFirstActive = (firstActive && i === 0) && 'is-active';
+      - const isScrollId = scrollId && `scroll-${i + 1}`
+      .accordion__element(class=[classElement, isFirstActive] data-accordion="element", id=isScrollId)
+        h3.accordion__title(data-accordion="button")!= countList + item.title
+        .accordion__content(data-accordion="content")
+          .accordion__wrapper!= item.tplContent
+
+mixin accordionParent()
+  //- TODO: Переделать на 2миксина
+  .accordion(data-accordion="parent")&attributes(attributes)
+    block
+
+mixin accordionItem({title, count=false, list=[], classElement, firstActive, scrollId})
+  - const countList = count ? `${i + 1}. ` : '';
+  - const isFirstActive = (firstActive && i === 0) && 'is-active';
+  - const isScrollId = scrollId && `scroll-${i + 1}`
+  .accordion__element(class=[classElement, isFirstActive] data-accordion="element", id=isScrollId)
+    h3.accordion__title(data-accordion="button")!= countList + title
+    .accordion__content(data-accordion="content")
+      .accordion__wrapper
+        block

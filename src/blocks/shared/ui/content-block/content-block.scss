@@ -1,0 +1,40 @@
+.content-block {
+  padding: 24px 15px;
+  background-color: $white;
+  border-radius: 4px;
+
+  @media (min-width: $screen-lg) {
+    padding: 28px;
+  }
+}
+
+.content-block__title {
+  text-align: center;
+  padding-bottom: 20px;
+  color: #000;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+}
+
+.content-block__accordion {
+  strong {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  p {
+    color: $black;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 300;
+  }
+
+  a {
+    color: inherit;
+  }
+}

@@ -13,6 +13,7 @@
 @import "../blocks/shared/utils-css/mixins/mixins";
 
 @import "../blocks/shared/ui/page/page";
+@import "../blocks/shared/ui/accordion/accordion";
 @import "../blocks/shared/ui/container/container";
 @import "../blocks/shared/ui/btn/btn";
 @import "../blocks/shared/ui/logo/logo";
@@ -22,8 +23,10 @@
 @import "../blocks/shared/ui/field-checkbox/field-checkbox";
 @import "../blocks/shared/ui/dropdown/dropdown";
 @import "../blocks/shared/ui/burger/burger";
+@import "../blocks/shared/ui/content-block/content-block";
 
 @import "../blocks/entities/main-nav/main-nav";
+@import "../blocks/entities/page-back/page-back";
 @import "../blocks/entities/search-form/search-form";
 @import "../blocks/entities/promo-blocks/promo-blocks";
 @import "../blocks/entities/preview/preview";
@@ -32,13 +35,12 @@
 @import "../blocks/entities/payment/payment";
 @import "../blocks/entities/subscribe/subscribe";
 @import "../blocks/entities/card-info/card-info";
+@import "../blocks/entities/info-nav/info-nav";
 
 @import "../blocks/widgets/page-header/page-header";
 @import "../blocks/widgets/page-footer/page-footer";
 @import "../blocks/widgets/block-products/block-products";
 @import "../blocks/widgets/not-found/not-found";
-@import "../blocks/widgets/info-nav/info-nav";
-
-@import "../blocks/pages/info-page";
+@import "../blocks/widgets/info-page/info-page";
 
 

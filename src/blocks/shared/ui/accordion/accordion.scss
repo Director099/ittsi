@@ -11,3 +11,43 @@
   transition: max-height 0.3s;
   overflow: hidden;
 }
+
+.accordion__title {
+  position: relative;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  padding: 18px 0;
+  cursor: pointer;
+  margin: 0;
+
+  &::after,
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 24px;
+    height: 1px;
+    background-color: #999;
+  }
+
+  &::before {
+    transform: rotate(-90deg);
+  }
+}
+
+.accordion__wrapper {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.accordion__element {
+  border-top: 1px solid #f7f7f7;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.accordion__element.is-active .accordion__title::before {
+  transform: translateY(-50%) rotate(-0deg);
+}

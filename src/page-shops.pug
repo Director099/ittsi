@@ -2,6 +2,7 @@ extends pug/layout.pug
 
 block var
   - const pageClassName = 'info-page'
+  - const pageCurrent = pages.pageShop.href
 
 block meta
   title= pages.pageShop.text
@@ -15,6 +16,6 @@ block content
       +content-block('Уфа')
         p #[strong АДРЕС:] Уфа, проспект Октября 4/1,  ЦТиР «МИР», 2 УРОВЕНЬ, Южная галерея
         p #[strong ГРАФИК РАБОТЫ:] ПН - ВС  10:00 - 23:00
-        p #[strong ТЕЛЕФОН:] #[a(href="tel:8(937)287-88-88") 8 (937) 287-88-88]
+        p #[strong ТЕЛЕФОН:] #[a(href="tel:+7(906)370-32-27") +7 (906) 370-32-27]
 block footer
   +page-footer()

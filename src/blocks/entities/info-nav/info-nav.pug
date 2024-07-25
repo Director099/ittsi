@@ -7,4 +7,4 @@ mixin info-nav
       each item in pages
         if(!pageOrderInfoNav(item) && item.href !== 'page-info.html')
           li.info-nav__item
-            a.info-nav__link(href=item.href)=item.text
+            a.info-nav__link(href=item.href class=`${item.href === pageCurrent ? "active" : ""}`)=item.text

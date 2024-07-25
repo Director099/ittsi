@@ -32,7 +32,9 @@
   color: inherit;
   border-top: 1px solid #f7f7f7;
 
-  &:hover {
+
+  &:hover,
+  &.active {
     background-color: #f7f7f7;
   }
 }

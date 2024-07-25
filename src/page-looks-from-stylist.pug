@@ -1,0 +1,35 @@
+extends pug/layout.pug
+
+block var
+  - const pageClassName = 'info-page'
+  - const pageCurrent = pages.pageLooksFromStylist.href
+
+block meta
+  title= pages.pageLooksFromStylist.text
+block header
+  +page-header()
+block content
+  .info-page__grid
+    +page-back
+    +info-nav.d-none.d-lg-block
+    .info-page__content
+      +content-block('Спортивная капсула')
+        +fashion({
+          mainImage: 'fashion-1',
+          folderImg: '1',
+          title: 'Спортивная капсула',
+          desc: 'Одежда для йоги, фитнеса, игры в большой теннис. <br> Подборка от ITTSI',
+          gallery: 'gallery-1',
+          list: Array.from({length: 21})
+        })
+      +content-block('Street Style')
+        +fashion({
+          mainImage: 'fashion-1',
+          folderImg: '2',
+          title: 'Street Style',
+          desc: 'Стритстайл (от англ. street style) – это уличное направление моды, в котором гармонично уживается неформальность, комфорт, свобода и самовыражение. Стиль начал зарождаться в начале 50-х годов в Японии и Англии, а затем быстро обрел популярность по всему миру. Дерзкие, экстравагантные наряды, подчеркивающие индивидуальность и обеспечивающие свободу движений. <br> Подборка от ITTSI',
+          gallery: 'gallery-2',
+          list: Array.from({length: 21})
+        })
+block footer
+  +page-footer()

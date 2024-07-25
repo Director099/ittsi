@@ -1,18 +1,10 @@
--
-  const infoNav = [
-    pages.pageShop,
-    pages.pageDelivery,
-    pages.pageReturnPolicy,
-    pages.pagePayment,
-    pages.pageFAQ,
-    pages.pageRulesCare,
-    pages.pageContact,
-  ]
+- const pageOrderInfoNav = (elem) => elem.href.indexOf('page');
 
 mixin info-nav
   aside.info-nav&attributes(attributes)
     h2.info-nav__title Клиентам
     ul.info-nav__list
-      each item in infoNav
-        li.info-nav__item
-          a.info-nav__link(href=item.href)=item.text
+      each item in pages
+        if(!pageOrderInfoNav(item) && item.href !== 'page-info.html')
+          li.info-nav__item
+            a.info-nav__link(href=item.href)=item.text

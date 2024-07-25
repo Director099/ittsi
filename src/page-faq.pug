@@ -1,0 +1,32 @@
+extends pug/layout.pug
+
+block var
+  - const pageClassName = 'info-page'
+
+block meta
+  title= pages.pageFAQ.text
+block header
+  +page-header()
+block content
+  -
+    const accordionList = [
+      {
+        title: 'У вас есть реальный магазин?',
+        tplContent: `<p>Да, конечно, недавно мы открылись в Уфе, в ТЦ "Мир", северная галерея, 2 уровень. Все наши магазины можно найти на странице Магазины</p>`
+      },
+      {
+        title: 'Бывают ли у вас скидки?',
+        tplContent: `<p>Да, все наши активные акции находятся в разделе <a href=${pages.pageBonus.href}>${pages.pageBonus.text}</a></p>`
+      }
+    ]
+  .info-page__grid
+    +page-back
+    +info-nav.d-none.d-lg-block
+    .info-page__content
+      +content-block('Частые вопросы')
+        +accordion({
+          list: accordionList,
+          firstActive: true
+        }).content-block__accordion
+block footer
+  +page-footer()

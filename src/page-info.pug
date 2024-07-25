@@ -8,21 +8,14 @@ block meta
 block header
   +page-header()
 block content
-  -
-    const cardsInfo = [
-      pages.pageShop,
-      pages.pageDelivery,
-      pages.pageReturnPolicy,
-      pages.pagePayment,
-      pages.pageFAQ,
-      pages.pageContact,
-    ]
+  - const pageOrderCardsInfo = (elem) => elem.href.indexOf('page');
 
   .info-page__grid
     +info-nav
     .info-page__content.d-none.d-lg-block
       section.info-page__card-grid
-        each item in cardsInfo
-          +card-info(item.text, item.href)
+        each item in pages
+          if(!pageOrderInfoNav(item) && item.href !== 'page-info.html')
+            +card-info(item.text, item.href)
 block footer
   +page-footer()

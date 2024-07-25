@@ -1,0 +1,9 @@
+mixin contact
+  section.contact&attributes(attributes)
+    h3.contact__title Мы на связи каждый день!
+    .contact__call-wrap
+      a.contact__call-number(href=numberPhone.href)= numberPhone.text
+      a.contact__call-number(href="tel:+7(906)370-32-27") +7 (906) 370-32-27
+    .contact__desc
+      span менеджер интернет-магазина
+    +socials.contact__messeger

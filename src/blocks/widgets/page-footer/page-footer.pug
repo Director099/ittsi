@@ -16,7 +16,7 @@ mixin page-footer()
             ul.page-footer__nav-list(data-accordion="content")
               each itemLinks in item.links
                 li.page-footer__nav-item
-                  a.page-footer__nav-link(href="#")= itemLinks
+                  a.page-footer__nav-link(href=itemLinks.href)= itemLinks.text
         .page-footer__nav-wrap(data-accordion="element")
           h3.page-footer__nav-title(data-accordion="button") Контакты
           .page-footer__contact-wrap(data-accordion="content")

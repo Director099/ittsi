@@ -15,6 +15,6 @@ mixin main-nav
                 ul.main-nav__column
                   each subMenu in container
                     li.main-nav__column-item
-                      a.main-nav__sub-link(href="#" class=subMenu.linkModified)
+                      a.main-nav__sub-link(href=pages.catalog.href class=subMenu.linkModified)
                         span= subMenu.linkTitle
 

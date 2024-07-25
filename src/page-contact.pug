@@ -1,0 +1,20 @@
+extends pug/layout.pug
+
+block var
+  - const pageClassName = 'info-page'
+
+block meta
+  title= pages.pageContact.text
+block header
+  +page-header()
+block content
+
+  .info-page__grid
+    +page-back
+    +info-nav.d-none.d-lg-block
+    .info-page__content
+      +content-block('Контакты')
+        +contact
+
+block footer
+  +page-footer()

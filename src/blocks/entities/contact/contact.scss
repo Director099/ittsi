@@ -1,0 +1,49 @@
+.contact {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact__title {
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.contact__call-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact__desc {
+  padding: 0 45px;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  color: #999;
+}
+
+.contact__call-number {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 21px;
+  line-height: 1.2;
+  letter-spacing: 2.85px;
+  font-weight: 300;
+  color: inherit;
+
+  &::before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg width='22' height='23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%23000' stroke-width='.7'%3E%3Cpath clip-rule='evenodd' d='M17.82 14.137c-.722-.75-1.625-.75-2.343 0-.548.57-1.096 1.14-1.634 1.72-.148.16-.272.194-.452.088-.354-.203-.732-.367-1.072-.59-1.589-1.049-2.92-2.398-4.098-3.915-.585-.755-1.105-1.562-1.468-2.47-.074-.184-.06-.305.082-.455.548-.556 1.082-1.126 1.621-1.697.75-.792.75-1.72-.005-2.518-.428-.455-.856-.9-1.284-1.354-.442-.464-.88-.933-1.326-1.392-.723-.74-1.625-.74-2.343.005-.553.57-1.082 1.155-1.644 1.716-.52.517-.783 1.15-.838 1.89-.087 1.204.193 2.34.59 3.447.81 2.291 2.043 4.326 3.54 6.192 2.02 2.523 4.433 4.52 7.256 5.96 1.27.648 2.587 1.146 4.019 1.228.985.058 1.841-.203 2.527-1.01.47-.551 1-1.054 1.497-1.58.736-.784.74-1.731.009-2.505-.875-.923-1.754-1.841-2.634-2.76z'/%3E%3Cpath d='M12 2s3.673.319 5.674 2.32C19.675 6.321 20 10 20 10' stroke-linecap='square'/%3E%3C/g%3E%3C/svg%3E");
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.contact__messeger {
+  justify-content: center;
+}

@@ -5,11 +5,13 @@ block meta
 block header
   +page-header()
 block content
-  +page-catalog(pages.catalogSale.text)
+  +page-catalog({
+    title: pages.catalogSale.text,
+  })
     each itemFro in Array.from({length: 6})
       each item, i in Array.from({length: 8})
         +preview({
-          img: i + 1,
+          img: i + 2,
           hasColors: true,
           priceSale: '5 768',
           title: "Платье из 100% хлопка",

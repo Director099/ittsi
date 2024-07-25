@@ -5,7 +5,9 @@ block meta
 block header
   +page-header()
 block content
-  +page-catalog(pages.catalog.text)
+  +page-catalog({
+    title: pages.catalog.text,
+  })
     each itemFro in Array.from({length: 6})
       each item, i in Array.from({length: 8})
         +preview({

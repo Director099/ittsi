@@ -47,6 +47,14 @@
   }
 }
 
+.page-catalog__catalog--col-span {
+  grid-column: auto/span 2;
+
+  @media (min-width: $screen-lg) {
+    padding: 0;
+  }
+}
+
 .page-catalog__filter {
   padding-left: 15px;
   padding-right: 15px;

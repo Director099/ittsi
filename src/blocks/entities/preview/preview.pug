@@ -8,6 +8,7 @@ mixin preview(item)
       priceSale = "5 768",
       img,
       hasColors,
+      hasCert,
       btnFavoriteActive = false,
       btnFavoriteCount = 123
     } = item
@@ -19,9 +20,13 @@ mixin preview(item)
       header.preview__swiper-wrap
         .swiper(data-preview-slider="")
           .swiper-wrapper
-            - for(let i = 1; i < 8; i++)
+            if(!hasCert)
+              - for(let i = 1; i < 8; i++)
+                .swiper-slide.preview__img
+                  img(src=`img/content/preview-${img}/prev-${i}.jpg` alt=title)
+            else
               .swiper-slide.preview__img
-                img(src=`img/content/preview-${img}/prev-${i}.jpg` alt=title)
+                img(src=`img/content/preview-${img}/prev-1.png` alt=title)
           .swiper-pagination.preview__pagination
         .preview__colors
           if(!!hasColors)

@@ -1,0 +1,19 @@
+.filter-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 15px;
+  font-weight: 400;
+  color: inherit;
+
+  padding: 15px 0;
+}
+
+.filter-bar__counter {
+  font-weight: 300;
+  color: #999;
+}
+
+.filter-bar__arrow {
+  fill: transparent;
+}

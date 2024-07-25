@@ -1,0 +1,40 @@
+.show-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  max-width: 288px;
+  width: 100%;
+  margin: 36px auto;
+
+  @media (min-width: $screen-lg) {
+    margin: 21px auto 48px;
+  }
+}
+
+.show-more__progress {
+  width: 100%;
+}
+
+.show-more__text {
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  color: #999;
+  margin: 0;
+}
+
+.show-more__btn {
+  width: 100%;
+  text-transform: uppercase;
+  padding: 13px;
+  font-weight: 500;
+
+  @media (min-width: $screen-xl) {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 2.86px;
+  }
+}

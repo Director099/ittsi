@@ -1,10 +1,10 @@
-mixin accordion({count=false, list=[], classElement, firstActive, scrollId})
+mixin accordion({count=false, list=[], classElement, firstActive, scrollId, attrs})
   .accordion(data-accordion="parent")&attributes(attributes)
     each item, i in list
       - const countList = count ? `${i + 1}. ` : '';
       - const isFirstActive = (firstActive && i === 0) && 'is-active';
       - const isScrollId = scrollId && `scroll-${i + 1}`
-      .accordion__element(class=[classElement, isFirstActive] data-accordion="element", id=isScrollId)
+      .accordion__element(class=[classElement, isFirstActive] data-accordion="element", id=isScrollId)&attributes(attrs)
         h3.accordion__title(data-accordion="button")!= countList + item.title
         .accordion__content(data-accordion="content")
           .accordion__wrapper!= item.tplContent

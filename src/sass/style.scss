@@ -24,6 +24,8 @@
 @import "../blocks/shared/ui/dropdown/dropdown";
 @import "../blocks/shared/ui/burger/burger";
 @import "../blocks/shared/ui/content-block/content-block";
+@import "../blocks/shared/ui/breadcrumbs/breadcrumbs";
+@import "../blocks/shared/ui/progress/progress";
 
 @import "../blocks/entities/main-nav/main-nav";
 @import "../blocks/entities/page-back/page-back";
@@ -38,11 +40,16 @@
 @import "../blocks/entities/info-nav/info-nav";
 @import "../blocks/entities/contact/contact";
 @import "../blocks/entities/fashion/fashion";
+@import "../blocks/entities/filter-accordion/filter-accordion";
+@import "../blocks/entities/show-more/show-more";
+@import "../blocks/entities/filter-bar/filter-bar";
 
 @import "../blocks/widgets/page-header/page-header";
 @import "../blocks/widgets/page-footer/page-footer";
 @import "../blocks/widgets/block-products/block-products";
 @import "../blocks/widgets/not-found/not-found";
 @import "../blocks/widgets/info-page/info-page";
+
+@import "../blocks/pages/page-catalog/page-catalog";
 
 

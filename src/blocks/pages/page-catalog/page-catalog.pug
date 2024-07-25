@@ -1,0 +1,61 @@
+include ./mock
+//- TODO Main подумать
+
+mixin page-catalog(title)
+  .page-catalog
+    header.page-catalog__header.d-none.d-lg-block
+      +breadcrumbs.page-catalog__breadcrumbs
+        +breadcrumbs-item(pages.index.text, pages.index.href)
+        +breadcrumbs-item(pages.catalog.text)
+      h1.page-catalog__title= pages.catalog.text
+    .page-catalog__filter
+      .page-catalog__grid
+        +filter-bar({
+          text: 'Фильтры',
+          counter: '1200 товаров',
+          iconFilter: true,
+        })
+        .page-catalog__filter-row.d-none.d-lg-flex
+          .page-catalog__filter-col
+            +filter-bar({
+              text: 'Размер',
+              counter: '7',
+              iconArrow: true,
+            })
+            +filter-bar({
+              text: 'Цвет',
+              counter: '4',
+              iconArrow: true,
+            })
+            +filter-bar({
+              text: 'Цена',
+              counter: '1',
+              iconArrow: true,
+            })
+          .page-catalog__filter-col
+            +filter-bar({
+              text: 'Упорядочить',
+              iconArrow: true,
+            })
+    .page-catalog__grid
+      aside.page-catalog__sidebar.d-none.d-lg-block
+        +accordion({
+          list: accordionFilter,
+          attrs: {
+            class: 'is-active'
+          }
+        }).filter-accordion
+      .page-catalog__catalog
+        .page-catalog__gap.grid-tpl-2.grid-tpl-lg-3.grid-tpl-xl-4
+          each itemFro in Array.from({length: 6})
+            each item, i in Array.from({length: 8})
+              +preview({
+                img: i + 1,
+                hasColors: i === 2,
+                priceSale: i !== 2 ? "" : '5 768',
+                title: "Платье из 100% хлопка",
+                btnFavoriteActive: i === 2,
+                btnFavoriteCount: i === 2 ? 124 : 123
+              })
+    +show-more
+

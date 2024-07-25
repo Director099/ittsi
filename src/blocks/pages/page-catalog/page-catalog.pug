@@ -6,8 +6,8 @@ mixin page-catalog(title)
     header.page-catalog__header.d-none.d-lg-block
       +breadcrumbs.page-catalog__breadcrumbs
         +breadcrumbs-item(pages.index.text, pages.index.href)
-        +breadcrumbs-item(pages.catalog.text)
-      h1.page-catalog__title= pages.catalog.text
+        +breadcrumbs-item(title)
+      h1.page-catalog__title= title
     .page-catalog__filter
       .page-catalog__grid
         +filter-bar({
@@ -47,15 +47,6 @@ mixin page-catalog(title)
         }).filter-accordion
       .page-catalog__catalog
         .page-catalog__gap.grid-tpl-2.grid-tpl-lg-3.grid-tpl-xl-4
-          each itemFro in Array.from({length: 6})
-            each item, i in Array.from({length: 8})
-              +preview({
-                img: i + 1,
-                hasColors: i === 2,
-                priceSale: i !== 2 ? "" : '5 768',
-                title: "Платье из 100% хлопка",
-                btnFavoriteActive: i === 2,
-                btnFavoriteCount: i === 2 ? 124 : 123
-              })
+          block
     +show-more
 

@@ -1,17 +1,17 @@
 extends pug/layout.pug
 
 block meta
-  title= pages.catalog.text
+  title= pages.catalogSale.text
 block header
   +page-header()
 block content
-  +page-catalog(pages.catalog.text)
+  +page-catalog(pages.catalogSale.text)
     each itemFro in Array.from({length: 6})
       each item, i in Array.from({length: 8})
         +preview({
           img: i + 1,
-          hasColors: i === 2,
-          priceSale: i !== 2 ? "" : '5 768',
+          hasColors: true,
+          priceSale: '5 768',
           title: "Платье из 100% хлопка",
           btnFavoriteActive: i === 2,
           btnFavoriteCount: i === 2 ? 124 : 123

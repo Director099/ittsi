@@ -9,10 +9,13 @@ mixin preview(item)
       img,
       hasColors,
       hasCert,
+      btnClose,
       btnFavoriteActive = false,
       btnFavoriteCount = 123
     } = item
   article.preview&attributes(attributes)
+    if(!!btnClose)
+      button.preview__btn-close(type="button") Удалить
     button.preview__btn-favorite(type="button" class=btnFavoriteActive && 'active')
       span.preview__heart
         span.preview__heart-count= btnFavoriteCount

@@ -11,10 +11,12 @@ mixin page-header()
           a.page-header__actions-link(href="#") Войти
         li.page-header__actions-item
           +link-icon({
-            svg: 'heart'
-          }).page-header__actions-link(href="#")
+            svg: 'heart',
+            count: ': 4'
+          }).page-header__actions-link(href=pages.catalogFavorite.href)
         li.page-header__actions-item
           +link-icon({
             svg: 'bag-2',
-            height: 19
+            height: 19,
+            count: ': 4'
           }).page-header__actions-link(href="#")

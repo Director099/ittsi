@@ -1,6 +1,6 @@
-mixin contact
+mixin contact(title)
   section.contact&attributes(attributes)
-    h3.contact__title Мы на связи каждый день!
+    h3.contact__title=title
     .contact__call-wrap
       a.contact__call-number(href=numberPhone.href)= numberPhone.text
       a.contact__call-number(href="tel:+7(906)370-32-27") +7 (906) 370-32-27

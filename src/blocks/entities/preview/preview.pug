@@ -16,7 +16,7 @@ mixin preview(item)
     button.preview__btn-favorite(type="button" class=btnFavoriteActive && 'active')
       span.preview__heart
         span.preview__heart-count= btnFavoriteCount
-    a.preview__link(href="#")
+    a.preview__link(href=pages.catalogSingle.href)
       header.preview__swiper-wrap
         .swiper(data-preview-slider="")
           .swiper-wrapper

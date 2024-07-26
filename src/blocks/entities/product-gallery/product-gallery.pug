@@ -1,0 +1,10 @@
+mixin product-gallery({title, img})
+  .product-gallery&attributes(attributes)
+    .swiper.product-gallery__swiper(data-gallary-slider="")
+      .swiper-wrapper.product-gallery__slider-wrap
+        .swiper-slide.product-gallery__item
+          video(src=`video/prev.mp4` autoplay="" muted="" loop="" playsinline="")
+        each item, i in Array.from({length: 5})
+          .swiper-slide.product-gallery__item
+            img(src=`img/content/preview-${img}/prev-${i + 1}.jpg` alt=title)
+      .swiper-pagination.product-gallery__pagination.d-lg-none

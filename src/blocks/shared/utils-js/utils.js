@@ -1,3 +1,3 @@
 export const MediaSize = {
-  XL: 1300
+  LG: 1024
 }

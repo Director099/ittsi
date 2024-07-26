@@ -1,0 +1,54 @@
+include mock
+
+mixin product-content(title)
+  .product-content
+    .product-content__group
+      header.product-content__header
+        h1.product-content__title= title
+        .product-content__favorite
+          +link-icon({
+            svg: 'heart',
+            width: 16,
+            height: 14,
+            count: '107'
+          }).product-content__link-icon
+        .product-content__price
+          span.product-content__price-text.product-content__price-text--cut= `6 490 ₽`
+          span.product-content__price-text.product-content__price-text--sale= `3 245 ₽`
+            span.product-content__price-percent (-50%)
+    .product-content__group
+      form.product-content__form
+        .product-content__colors-group
+          h3.product-content__colors-text #[span Цвет:] Голубой
+          .product-content__colors-grid
+            a.product-content__color-link.active(href="#" style="background-color: #b3f1fc")
+            a.product-content__color-link(href="#" style="background-color: #5a8fd5")
+            a.product-content__color-link(style="background-color: #000")
+            a.product-content__color-link(style="background-color: #fff; border-color: #999" )
+        .product-content__link-group
+          a.product-content__link-table(href="#" data-fancybox="") Таблица размеров
+        .product-content__size-product
+          +field-radio(radioList).product-content__size-radio.field-radio--size
+        .product-content__form-btn
+          button.btn.btn--dark.product-content__btn-basket В корзину
+          a.btn.btn--light.product-content__btn-order(href="#" data-fancybox="") Купить в 1 клик
+          button.btn.btn--light.product-content__btn-order.product-content__btn-order--favorite.active В избранном
+    .product-content__group
+      ul.product-content__delivery-list
+        li.product-content__delivery-item
+          +benefits({
+            svg: 'shop',
+            desc: 'В пунктах выдачи - Бесплатно'
+          })
+        li.product-content__delivery-item
+          +benefits({
+            svg: 'delivery',
+            desc: 'Курьером - от 350р',
+            subText: '14 рабочих дней'
+          })
+        li.product-content__delivery-item
+          +benefits({
+            svg: 'return',
+            desc: 'Бесплатный обмен и удобный возврат',
+            subText: 'Без вопросов возьмем товар обратно '
+          })

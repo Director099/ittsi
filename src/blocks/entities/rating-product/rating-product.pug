@@ -1,0 +1,9 @@
+mixin rating-product()
+  .rating-product&attributes(attributes)
+    .rating-product__content
+      strong.rating-product__number 5
+      .rating-product__row
+        +final-rating.rating-product__stars
+        span.rating-product__text Общий рейтинг
+    .rating-product__btn-wrap
+      a.btn.btn--dark.rating-product__btn(href="#modal-review" data-fancybox="") Оставить отзыв

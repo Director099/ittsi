@@ -9,20 +9,28 @@
   }
 
   const contactEmail = {
-    href: 'mailto:mailto:hello@toptop.ru',
-    text: 'hello@toptop.ru'
+    href: 'mailto:mailto:hello@ittsi.ru',
+    text: 'hello@ittsi.ru'
   }
 
   const formFilelds = {
     name: {
-      title: 'Имя',
+      helpText: 'Чтобы мы знали, как к вам обращаться',
       attrs: {
-        placeholder: 'Ваше имя',
+        placeholder: 'Имя',
         type: "text",
+      }
+    },
+    surname: {
+      helpText: 'Нужно для транспортной накладной',
+      attrs: {
+        placeholder: 'Фамилия',
+        type: 'text',
       }
     },
     phone: {
       title: 'Телефон',
+      helpText: 'Пришлем сообщение о подтверждении заказа',
       attrs: {
         placeholder: 'Телефон',
         type: 'tel',
@@ -32,6 +40,7 @@
     },
     email: {
       title: 'Email',
+      helpText: 'Пришлем подтверждение заказа',
       attrs: {
         placeholder: 'Ваш email',
         type: "email",

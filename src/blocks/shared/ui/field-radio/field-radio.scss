@@ -8,7 +8,9 @@ $line-height:                 1.5 !default;
 
   $block-name:                &; // #{$block-name}__element
 
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 
   &__title {
     display: block;
@@ -30,7 +32,7 @@ $line-height:                 1.5 !default;
     &:before {
       content: '';
       position: absolute;
-      top: 5px;
+      top: 3px;
       left: 0;
       width: 14px;
       height: 14px;
@@ -45,7 +47,7 @@ $line-height:                 1.5 !default;
     &:after {
       content: '';
       position: absolute;
-      top: 9px;
+      top: 7px;
       left: 4px;
       width: 6px;
       height: 6px;

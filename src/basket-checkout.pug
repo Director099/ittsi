@@ -1,0 +1,149 @@
+extends pug/layout.pug
+
+block var
+  -
+    const pageClassName = 'page-checkout'
+    const fieldData = [
+      formFilelds.name,
+      formFilelds.surname,
+      formFilelds.phone,
+      formFilelds.email,
+    ]
+    const radioCheck = [
+      {
+        title: 'В пункт выдачи',
+        price: 'Бесплатно',
+        btnFilter: 'current-point',
+        className: 'active'
+      },
+      {
+        title: 'Доставка по Уфе',
+        price: 'Бесплатно',
+        text: 'Доставляем в течение 1 дня',
+        btnFilter: 'delivery'
+      },
+      {
+        title: 'Доставка Boxberry (Курьером до двери)',
+        price: 'от 350 р.',
+        text: '7 рабочих дней',
+        btnFilter: 'delivery'
+      },
+      {
+        title: 'Доставка СДЕК',
+        price: 'от 2 153,7 р.',
+        text: '7 рабочих дней',
+        btnFilter: 'delivery-sdek'
+      }
+    ]
+
+block meta
+  title= pages.basketCheckout.text
+block header
+  +page-header()
+block content
+  form.page-checkout__grid(action="#" data-form="")
+    .page-checkout__content(data-tab-filter="")
+      +content-block('Введите личные данные')
+        .grid-tpl-1.grid-tpl-md-2.page-checkout__form-gap
+          each item in fieldData
+            +field-text({
+              helpText: item.helpText,
+              attrs: {
+                class: 'subscribe__field',
+                placeholder: item.attrs.placeholder,
+                type: item.attrs.type,
+                required: true,
+                pattern: item.attrs.pattern,
+                'data-pristine-pattern-message': item.attrs['data-pristine-pattern-message'],
+                "data-pristine-email-message": item.attrs["data-pristine-email-message"],
+                'data-pristine-required-message': " ",
+              }
+            }).field-text--std
+      +content-block('Выберите удобный способ доставки')
+        +field-text({
+          attrs: {
+            placeholder: 'Город доставки',
+          }
+        }).field-text--std.page-checkout__mb
+        .grid-tpl-1.grid-tpl-md-2.page-checkout__form-gap
+          each item, i in radioCheck
+            +block-radio({
+              idxChecked: i,
+              name: 'delivery',
+              title: item.title,
+              price: item.price,
+              text: item.text,
+            })(data-btn-filter=item.btnFilter, class=item.className)
+      +content-block('Адрес доставки')
+        .page-checkout__tab(data-filter="current-point")
+          p Забрать заказ можно с 10:00 до 22:00
+          p Пункт получения:
+          p Самовывоз из ЦТиР "Мир"
+          p Адрес: Уфа, проспект Октября 4/1
+          p Время работы: 10:00 - 22:00
+          p Телефон: #[a(href="tel:+79372878888") 8 (937) 287-88-88]
+        .page-checkout__tab(data-filter="delivery")
+          .grid-tpl-1.grid-tpl-md-2
+            .grid-tpl-col-1.grid-tpl-col-md-2
+              +field-text({
+                attrs: {
+                  placeholder: 'Улица',
+                }
+              }).field-text--std
+            each item in ['Дом', 'Подъезд', 'Этаж', 'Домофон']
+              +field-text({
+                attrs: {
+                  placeholder: item,
+                  "data-number-only": "00"
+                }
+              }).field-text--std
+        .page-checkout__tab(data-filter="delivery-sdek")
+          +field-text({
+            attrs: {
+              placeholder: 'Пункт получения',
+            }
+          }).field-text--std
+          iframe.page-checkout__map(src='https://yandex.ru/map-widget/v1/?display-text=CDEK&ll=55.963969%2C54.751537&mode=search&sll=55.963969%2C54.750897&text=chain_id%3A%28272889558%29&z=11'  allowfullscreen='true')
+
+      +content-block('Способ оплаты')
+        +field-radio([
+          {
+            title: 'Кредитной картой (Visa, Mastercard) через Альфа Банк',
+            attrs: {
+              name: 'pay',
+              checked: true,
+            }
+          },
+          {
+            title: 'При получении товара',
+            attrs: {
+              name: 'pay',
+            }
+          },
+          {
+            title: 'Подели. Оплатить частями',
+            attrs: {
+              name: 'pay',
+            }
+          },
+        ])
+      +content-block()
+        .page-checkout__row
+          +field-text({
+            attrs: {
+              placeholder: 'Промо-код',
+            }
+          }).field-text--std
+          button.btn.btn--light.page-checkout__btn Применить
+      +content-block
+        +field-text({
+          isTextarea: true,
+          helpText: 'Будем рады любой помощи',
+          attrs: {
+            placeholder: 'Комментарий к заказу',
+            name: 'comment',
+          }
+        }).field-text--std
+    +total-amount.page-checkout__total-amount
+block footer
+  +page-footer()

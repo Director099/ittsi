@@ -1,0 +1,53 @@
+-
+  const cardProduct = [
+    {
+      title: 'Джемпер из смесовой шерсти',
+      priceSale: "5 768",
+      priceCurrent: "7 690"
+    },
+    {
+      title: 'Платье с принтом «горох»',
+      priceCurrent: "7 690"
+    },
+    {
+      title: 'Платье из смесовой вискозы',
+      priceCurrent: "7 690"
+    },
+    {
+      title: 'Платье с принтом «горох»',
+      priceCurrent: "7 690"
+    },
+    {
+      title: 'Платье из смесовой вискозы',
+      priceCurrent: "7 690"
+    },
+  ]
+
+mixin total-amount
+  aside.total-amount&attributes(attributes)
+    +content-block('Итого <span class="total-amount__sub-title">7 товаров</span>').total-amount__content-title
+      .total-amount__goods
+        each item, i in cardProduct
+          +card-product({
+            folderImg: i + 1,
+            img: i + 1,
+            title: item.title,
+            priceSale: item.priceSale,
+            priceCurrent: item.priceCurrent
+          })
+      +table().total-amount__purchase-total
+        tr
+          td Товары:
+          td 69 630 ₽
+        tr.total-amount__sale
+          td Скидка:
+          td - 1 923 ₽
+        tr
+          td Доставка курьером
+          td Бесплатно
+        tr.total-amount__total
+          td Итого:
+          td 67 707 ₽
+      footer.total-amount__footer
+        button.btn.btn--dark.total-amount__btn(data-form-btn="") Оформить заказ
+        p.total-amount__footer-text Менеджер свяжется с вами и уточнит варианты и время доставки. Мы не рассылаем спам. Нажимая на кнопку "Оформить заказ" Вы соглашаетесь с #[a(href=pages.pagePrivacyPolicy.href) политикой конфиденциальности] этого сайта

@@ -1,0 +1,42 @@
+.rating-product__content {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 20px;
+
+  @media (min-width: $screen-lg) {
+    gap: 20px;
+  }
+}
+
+.rating-product__number {
+
+}
+
+.rating-product__stars {
+  margin-bottom: 6px;
+}
+
+.rating-product__text {
+
+}
+
+.rating-product__btn-wrap {
+  margin-left: 30px;
+  margin-right: 30px;
+  @media (min-width: $screen-lg) {
+    margin: 0;
+  }
+}
+
+.rating-product__btn {
+  width: 100%;
+  padding: 8px;
+
+  @media (min-width: $screen-lg) {
+    padding: 10px;
+    margin: 0;
+  }
+}
+
+

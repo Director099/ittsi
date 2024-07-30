@@ -9,6 +9,12 @@ document.querySelectorAll('[type="tel"]').forEach((item) => {
   });
 })
 
+document.querySelectorAll('[data-number-only]').forEach((item) => {
+  IMask(item, {
+    mask: item.dataset.numberOnly ?? '00'
+  });
+})
+
 // Вспомогательная функция открытия и закрытия
 document.querySelectorAll('[data-fancybox-src]')?.forEach(item =>
   item.addEventListener('click', (e) => {

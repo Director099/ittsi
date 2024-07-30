@@ -27,6 +27,9 @@
 @import "../blocks/shared/ui/content-block/content-block";
 @import "../blocks/shared/ui/breadcrumbs/breadcrumbs";
 @import "../blocks/shared/ui/progress/progress";
+@import "../blocks/shared/ui/price/price";
+@import "../blocks/shared/ui/table/table";
+@import "../blocks/shared/ui/final-rating/final-rating";
 
 @import "../blocks/entities/main-nav/main-nav";
 @import "../blocks/entities/page-back/page-back";
@@ -46,15 +49,22 @@
 @import "../blocks/entities/filter-bar/filter-bar";
 @import "../blocks/entities/product-gallery/product-gallery";
 @import "../blocks/entities/benefits/benefits";
+@import "../blocks/entities/block-radio/block-radio";
+@import "../blocks/entities/card-product/card-product";
+@import "../blocks/entities/review-content/review-content";
+@import "../blocks/entities/rating-product/rating-product";
 
+@import "../blocks/widgets/reviews-author/reviews-author";
 @import "../blocks/widgets/page-header/page-header";
 @import "../blocks/widgets/page-footer/page-footer";
 @import "../blocks/widgets/block-products/block-products";
 @import "../blocks/widgets/not-found/not-found";
 @import "../blocks/widgets/info-page/info-page";
 @import "../blocks/widgets/product-content/product-content";
+@import "../blocks/widgets/total-amount/total-amount";
 
 @import "../blocks/pages/page-catalog/page-catalog";
+@import "../blocks/pages/page-checkout/page-checkout";
 @import "../blocks/pages/catalog-single/catalog-single";
 
 

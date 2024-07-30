@@ -1,0 +1,77 @@
+
+
+.total-amount__content-title .content-block__title {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding-bottom: 28px;
+}
+
+.total-amount__sub-title {
+  color: #999;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+
+.total-amount__goods {
+  max-height: 265px;
+  width: 100%;
+  padding-right: 8px;
+  overflow: auto;
+  border-top: 1px solid #e4e4e4;
+}
+
+.total-amount__btn {
+  width: 100%;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.85714px;
+  text-transform: uppercase;
+
+  padding: 15.5px 10px;
+}
+
+.total-amount__footer-text {
+  color: #999;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.total-amount__purchase-total {
+  border: none;
+  border-top: 1px solid #e4e4e4;
+  padding-top: 5px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1;
+
+  table {
+    border: none;
+  }
+
+  td {
+    padding: 5px 0;
+    border: none;
+
+    &:not(:first-child) {
+      border: none;
+      padding-left: 5px;
+      text-align: right;
+    }
+  }
+}
+
+.total-amount__sale {
+  color: $color-danger;
+}
+
+.total-amount__total {
+  font-weight: 500;
+}

@@ -1,0 +1,14 @@
+mixin card-product({folderImg, img, priceSale, priceCurrent, title})
+  a.card-product(href=pages.catalogSingle.href)&attributes(attributes)
+    .card-product__img
+      img(src=`img/content/preview-${folderImg}/prev-${img}.jpg` alt=title)
+    section.card-product__info
+      h3.card-product__title
+        span=title
+      .card-product__desc
+        p Размер XS
+        p Кол-во: 2
+      +price({
+        priceSale: priceSale,
+        priceCurrent: priceCurrent
+      }).card-product__price

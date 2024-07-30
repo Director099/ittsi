@@ -3,3 +3,9 @@
     border-color: $color-danger;
   }
 }
+
+.has-danger.field-text--std {
+  .field-text__input {
+    border-color: $color-danger;
+  }
+}

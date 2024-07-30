@@ -1,0 +1,44 @@
+.price {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 4px;
+  margin: 0;
+}
+
+.price__text {
+  color: $black;
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 400;
+
+  @media (min-width: $screen-lg) {
+    font-size: 15px;
+    line-height: 1;
+  }
+}
+
+.price__text--sale {
+  display: flex;
+  gap: 4px;
+  align-items: flex-end;
+  font-weight: 500;
+  color: $color-danger;
+
+  @media (min-width: $screen-lg) {
+    font-size: 15px;
+    line-height: 1;
+  }
+}
+
+.price__text--cut {
+  color: #999; // Todo цвет
+  text-decoration: line-through;
+}
+
+.price__percent {
+  color: $color-danger;
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 500;
+}

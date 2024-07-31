@@ -1,0 +1,53 @@
+-
+  const fieldTextarea = [
+    {
+      title: 'Опишите подробнее свои впечатления',
+      isTextarea: true
+    },
+    {
+      title: 'Опишите достоинства',
+      isTextarea: true
+    },
+    {
+      title: 'Опишите недостатки',
+      isTextarea: true
+    },
+    {
+      title: 'Как вас зовут?',
+    },
+    {
+      title: 'Откуда вы?',
+    },
+    formFilelds.email
+  ]
+
+mixin modal-review
+  +modal({
+    id: 'modal-review',
+    title: 'Новый отзыв'
+  }).modal-review
+    +form.modal-review__form(action=pages["404"].href method="POST" data-form="")
+      .modal-review__group
+        +choose-stars('Оцените товар:').modal-review__stars
+        .modal-review__fields.grid-tpl-1.grid-tpl-lg-2
+          each item, i in fieldTextarea
+            +field-text({
+              title: item.title,
+              isTextarea: item.isTextarea,
+              attrs: {
+                type: 'text',
+                placeholder: item.title,
+                'data-pristine-required-message': " ",
+              }
+            })(class=i > 2 ? '' : 'grid-tpl-col-lg-2').field-text--std
+        +field-checkbox([
+          {
+            title: 'Нажимая на кнопку, вы даёте согласие на обработку своих персональных данных',
+            attrs: {
+              name: 'check',
+              checked: true,
+              required: true,
+            }
+          },
+        ])
+      button.btn.btn--dark.modal-review__btn(disabled, data-form-btn="" type="button") Отправить отзыв

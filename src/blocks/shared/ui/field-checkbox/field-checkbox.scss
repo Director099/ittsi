@@ -30,7 +30,7 @@ $border-radius:               3px !default;
   &__name {
     position: relative;
     display: inline-block;
-    padding-left: 1.5em;
+    padding-left: 30px;
     font-weight: 400;
     line-height: $line-height;
     cursor: pointer;
@@ -64,9 +64,9 @@ $border-radius:               3px !default;
       position: absolute;
       top: 0px;
       left: 0;
-      width: 14px;
-      height: 14px;
-      border: 2px solid currentColor;
+      width: 20px;
+      height: 20px;
+      border: 1px solid currentColor;
       border-radius: $border-radius;
     }
 

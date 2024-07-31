@@ -1,0 +1,10 @@
+mixin size-table({title, src, list})
+  section.size-table
+    h3.size-table__title= title
+    .size-table__grid
+      ul.size-table__list
+        each item, i in tableSize
+          li.size-table__item
+            h4.size-table__sub-title= `${i + 1}. ${item.subTitle}`
+            p.size-table__text= item.text
+      img.size-table__img(src=`img/content/${src}` alt=title)

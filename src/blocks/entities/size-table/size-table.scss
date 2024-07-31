@@ -1,0 +1,42 @@
+.size-table__list {
+  @include ul-none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.size-table__title {
+  margin-bottom: 32px;
+  color: #000;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: .5px;
+}
+
+.size-table__item {
+  color: $black;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.size-table__sub-title {
+  font-weight: 500;
+  text-transform: uppercase;
+
+  margin-bottom: 16px;
+}
+
+.size-table__text {
+  font-weight: 300;
+  margin: 0;
+}
+
+.size-table__img {
+  flex-shrink: 0;
+  width: 100%;
+
+  @media (min-width: $screen-lg) {
+    width: auto;
+  }
+}

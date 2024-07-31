@@ -1,6 +1,6 @@
 //- Все примеси в этом файле должны начинаться c имени блока (modal)
 
-mixin modal(id, title, mods)
+mixin modal({id, title})
 
   //- Принимает:
   //-   id      {string} - идентификатор
@@ -14,19 +14,19 @@ mixin modal(id, title, mods)
             button.btn(type='button', data-dismiss='modal') Закрыть
 
   -
-    // список модификаторов
+  //- список модификаторов
     var allMods = '';
-    if(typeof(mods) !== 'undefined' && mods) {
+    if (typeof (mods) !== 'undefined' && mods) {
       var modsList = mods.split(',');
       for (var i = 0; i < modsList.length; i++) {
         allMods = allMods + ' modal--' + modsList[i].trim();
       }
     }
 
-  .modal(id=id, class=allMods, tabindex='-1', role='dialog')&attributes(attributes)
+  .modal(id=id, tabindex='-1', role='dialog')&attributes(attributes)
     .modal__dialog(role='document')
-        .modal__content
-          .modal__header
-            span.close.modal__close(data-dismiss='modal', aria-label='Закрыть') #[span]
-            h4.modal__title!= title
-          block
+      .modal__content
+        .modal__header
+          span.modal__close(data-fancybox-close="", aria-label='Закрыть')
+          h4.modal__title!= title
+        block

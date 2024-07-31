@@ -1,3 +1,9 @@
+.final-rating__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
 .final-rating__row {
   display: flex;
   gap: 6px;
@@ -8,14 +14,14 @@
 }
 
 .final-rating__star {
-  fill: red;
+  fill: #999;
 
   &--filled {
-    fill: #999;
+    fill: #fabc07;
   }
+}
 
-  @media (min-width: $screen-lg) {
-    width: 18px;
-    height: 18px;
-  }
+.final-rating__data {
+  margin: 0;
+  color: #555;
 }

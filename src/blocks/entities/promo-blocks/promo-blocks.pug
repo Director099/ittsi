@@ -2,5 +2,5 @@ mixin promo-blocks(list)
   .promo-blocks.grid-tpl-1.grid-tpl-lg-2&attributes(attributes)
     each item, i in list
       - const firstElem = !i && 'promo-blocks__link--ident grid-tpl-col-lg-2';
-      a.promo-blocks__link(href="#" class=firstElem)
+      a.promo-blocks__link(href=pages.catalogSale.href class=firstElem)
         img(src=`img/content/promo-${item}.jpg` alt="Summer Sale")

@@ -1,19 +1,44 @@
 include constans
 
 mixin reviews-author()
-  section.reviews-author&attributes(attributes)
-    h2.reviews-author__title Отзывы (258)
-    .reviews-author__gap.grid-tpl-1.grid-tpl-xl-12
-      .grid-tpl-col-xl-8
+  .reviews-author&attributes(attributes)
+    header.reviews-author__header
+      .reviews-author__grid
+        .reviews-author__col
+          +field-select({
+            options: [
+              {
+                title: 'Сначала полезные',
+              },
+              {
+                title: 'Сначала новые',
+              },
+              {
+                title: 'Сначала старые',
+              },
+              {
+                title: 'Сначала с высокой оценкой',
+              },
+              {
+                title: 'Сначала с низкой оценкой',
+              },
+            ],
+          }).reviews-author__select
+        .reviews-author__col
+          a.btn.btn--dark.reviews-author__btn(href="#modal-review" data-fancybox="") Оставить отзыв
+    .reviews-author__grid
+      .reviews-author__col.order-xl-1
+        +rating-product.reviews-author__rating
+      .reviews-author__col
         ul.reviews-author__list
           each item in review
             li.reviews-author__item
               +review-content({
-                text: item.text,
-                data: item.data
+                list: item.list,
+                name: item.name,
+                data: item.data,
               })
         .reviews-author__show-more
-      .grid-tpl-col-xl-4
-        +rating-product.reviews-author__rating
+
 
 

@@ -7,36 +7,29 @@ $border-color:                hsl(0, 0%, 60%) !default;
 
 $line-height:                 1.5 !default;
 
-$border-radius:               3px !default;
+$border-radius:               4px !default;
 
 .field-select {
 
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: 1rem;
-
-  &__name {
-    @include field-name;
-  }
-
-  &__input-wrap {}
 
   &__select {
     display: inline-block;
     vertical-align: middle;
     width: 100%;
     line-height: $line-height;
-    padding: $field-padding-vertical $field-padding-horizontal;
+    padding: 3px 30px 3px 10px;
     font-size: inherit;
     font-family: inherit;
-    border: 1px solid $border-color;
+    border: 2px solid #e2e4e8;
     border-radius: $border-radius;
     appearance: none;
     background-color: #fff;
-    background-image: svg-load('../blocks/field-select/bg-img/select-down.svg');
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: right 0.3em center;
+    background-position: right 10px center;
     background-size: 1.063em 0.688em;
 
     &[multiple] {
@@ -56,11 +49,7 @@ $border-radius:               3px !default;
     &[disabled],
     &[readonly] {
       cursor: default;
-      background-color: $gray-lightest;
+      background-color: #999;
     }
-  }
-
-  &__help-text {
-
   }
 }

@@ -19,7 +19,7 @@ mixin progress(percent, text, mods)
       }
     }
 
-  .progress&attributes(attributes)(class=allMods)
-    .progress__bar(role='progressbar', style='width: ' + percent + '%;', aria-valuenow=percent)&attributes(attributes)
+  .progress&attributes(attributes)
+    .progress__bar(role='progressbar', style='width: ' + percent + '%;', aria-valuenow=percent)
       if(typeof(text) !== 'undefined' && text)
         span.progress__bartext!= text

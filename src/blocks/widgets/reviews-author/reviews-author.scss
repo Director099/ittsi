@@ -48,8 +48,11 @@
   border-bottom: 1px solid #e2e4e8;
 }
 
-.reviews-author__select {
+.reviews-author__rating {
+  margin-bottom: 15px;
+}
 
+.reviews-author__select {
   @media (min-width: $screen-lg) {
     max-width: 245px;
   }

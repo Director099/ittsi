@@ -24,11 +24,12 @@ mixin reviews-author()
               },
             ],
           }).reviews-author__select
-        .reviews-author__col
+        .reviews-author__col.d-none.d-xl-block
           a.btn.btn--dark.reviews-author__btn(href="#modal-review" data-fancybox="") Оставить отзыв
     .reviews-author__grid
       .reviews-author__col.order-xl-1
         +rating-product.reviews-author__rating
+        a.btn.btn--dark.d-xl-none.reviews-author__btn(href="#modal-review" data-fancybox="") Оставить отзыв
       .reviews-author__col
         ul.reviews-author__list
           each item in review

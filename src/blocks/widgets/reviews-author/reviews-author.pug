@@ -38,7 +38,13 @@ mixin reviews-author()
                 name: item.name,
                 data: item.data,
               })
-        .reviews-author__show-more
+        .reviews-author__pagination
+          +pagination()
+            +pagination-item('1', '#')
+            +pagination-item('2', '#')
+            +pagination-item('...')
+            +pagination-item('5', '#', true)
+            +pagination-item('6', '#')
 
 
 

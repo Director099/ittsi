@@ -1,6 +1,6 @@
 //- Все примеси в этом файле должны начинаться c имени блока (modal)
 
-mixin modal({id, title})
+mixin modal({id, title, tplHeader})
 
   //- Принимает:
   //-   id      {string} - идентификатор
@@ -28,5 +28,8 @@ mixin modal({id, title})
       .modal__content
         .modal__header
           span.modal__close(data-fancybox-close="", aria-label='Закрыть')
-          h4.modal__title!= title
+          if(tplHeader)
+            != tplHeader
+          if(!!title)
+            h4.modal__title!= title
         block

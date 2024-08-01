@@ -1,0 +1,35 @@
+-
+  const formRecovery = [
+    formFilelds.email,
+  ]
+
+mixin modal-recovery()
+  +modal({
+    id: 'modal-recovery',
+    title: 'Восстановление данных'
+  }).modal-entry
+    form.modal-entry__form(action="" method="POST" data-form="")
+      +fieldset.modal-entry__fieldset
+        each item in formRecovery
+          +field-text({
+            isTextarea: item.isTextarea,
+            attrs: {
+              placeholder: item.attrs.placeholder,
+              required: true,
+              type: item.attrs.type,
+              minlength: item.attrs.minlength,
+              min: item.attrs.min,
+              pattern: item.attrs.pattern,
+              'data-pristine-required-message': " ",
+              'data-pristine-minlength-message': item.attrs['data-pristine-minlength-message'],
+              'data-pristine-min-message': item.attrs['data-pristine-min-message'],
+              'data-pristine-pattern-message': item.attrs['data-pristine-pattern-message'],
+              "data-number-only": item.attrs['data-number-only'],
+              "data-pristine-email-message": item.attrs["data-pristine-email-message"],
+              "data-pristine-equals-message": item.attrs["data-pristine-email-message"],
+              "data-pristine-equals": item.attrs["data-pristine-equals"]
+            }
+          }).field-text--std
+        a.line-link.modal-entry__forgot-psw(data-fancybox-src="#modal-entry") Авторизация
+      .modal-entry__btn-wrap
+        button.btn.btn--dark.modal-entry__btn(disabled, data-form-btn="") Получить ссылку

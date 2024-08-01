@@ -28,8 +28,8 @@ mixin product-content({title, list, modalSizeTable})
         .product-content__size-product
           +field-radio(list).product-content__size-radio.field-radio--size
         .product-content__form-btn
-          button.btn.btn--dark.product-content__btn-basket В корзину
-          a.btn.btn--light.product-content__btn-order(href="#" data-fancybox="") Купить в 1 клик
+          button.btn.btn--dark.product-content__btn-basket(data-fancybox="" data-src="#modal-basket") В корзину
+          a.btn.btn--light.product-content__btn-order(data-fancybox="" href="#modal-one-click") Купить в 1 клик
           button.btn.btn--light.product-content__btn-order.product-content__btn-order--favorite.active В избранном
     .product-content__group
       ul.product-content__delivery-list

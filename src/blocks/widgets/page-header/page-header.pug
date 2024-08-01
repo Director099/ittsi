@@ -8,7 +8,7 @@ mixin page-header()
         +search-form.page-header__search
       ul.page-header__actions
         li.page-header__actions-item.d-none.d-lg-block
-          a.page-header__actions-link(href="#") Войти
+          a.page-header__actions-link(data-fancybox="" href="#modal-entry") Войти
         li.page-header__actions-item
           +link-icon({
             svg: 'heart',
@@ -19,4 +19,4 @@ mixin page-header()
             svg: 'bag-2',
             height: 19,
             count: ': 4'
-          }).page-header__actions-link(href="#")
+          }).page-header__actions-link(data-fancybox="" href="#modal-basket")

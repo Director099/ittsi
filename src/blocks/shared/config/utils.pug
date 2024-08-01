@@ -47,4 +47,23 @@
         "data-pristine-email-message": " "
       }
     },
+    password: {
+      title: 'Пароль',
+      attrs: {
+        id: 'psw',
+        type: "password",
+        placeholder: 'Не менее 8-ми символов',
+        minlength: 8,
+        "data-pristine-minlength-message": ' '
+      }
+    },
+    reatryPassword: {
+      title: 'Подтвердите пароль',
+      attrs: {
+        type: "password",
+        placeholder: 'Подтвердите пароль',
+        "data-pristine-equals": '#psw',
+        "data-pristine-equals-message": ' '
+      }
+    },
   }

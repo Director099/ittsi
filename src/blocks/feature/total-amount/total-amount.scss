@@ -1,20 +1,3 @@
-
-
-.total-amount__content-title .content-block__title {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  padding-bottom: 28px;
-}
-
-.total-amount__sub-title {
-  color: #999;
-  font-size: 13px;
-  font-weight: 300;
-  letter-spacing: normal;
-  text-transform: capitalize;
-}
-
 .total-amount__goods {
   max-height: 265px;
   width: 100%;
@@ -39,8 +22,14 @@
   font-weight: 300;
   font-size: 12px;
   line-height: 20px;
-  margin-top: 8px;
   margin-bottom: 0;
+}
+
+.total-amount__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 500;
 }
 
 .total-amount__purchase-total {
@@ -70,8 +59,4 @@
 
 .total-amount__sale {
   color: $color-danger;
-}
-
-.total-amount__total {
-  font-weight: 500;
 }

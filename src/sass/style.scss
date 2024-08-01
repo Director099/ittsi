@@ -60,6 +60,8 @@
 @import "../blocks/entities/choose-stars/choose-stars";
 @import "../blocks/entities/size-table/size-table";
 
+@import "../blocks/feature/total-amount/total-amount";
+
 @import "../blocks/widgets/reviews-author/reviews-author";
 @import "../blocks/widgets/page-header/page-header";
 @import "../blocks/widgets/page-footer/page-footer";
@@ -67,10 +69,11 @@
 @import "../blocks/widgets/not-found/not-found";
 @import "../blocks/widgets/info-page/info-page";
 @import "../blocks/widgets/product-content/product-content";
-@import "../blocks/widgets/total-amount/total-amount";
 @import "../blocks/widgets/modal-review/modal-review";
 @import "../blocks/widgets/modal-size-table/modal-size-table";
 @import "../blocks/widgets/modal-basket/modal-basket";
+@import "../blocks/widgets/modal-entry/modal-entry";
+@import "../blocks/widgets/modal-one-click/modal-one-click";
 
 @import "../blocks/pages/page-catalog/page-catalog";
 @import "../blocks/pages/page-checkout/page-checkout";

@@ -1,0 +1,46 @@
+-
+  const formOneClick = [
+    formFilelds.name,
+    formFilelds.phone,
+    formFilelds.email,
+  ]
+
+mixin modal-one-click()
+  +modal({
+    id: 'modal-one-click',
+    title: 'Купить в 1 клик'
+  }).modal-one-click
+    form.modal-one-click__form(action="" method="POST" data-form="")
+      +fieldset.modal-one-click__fieldset
+        each item in formOneClick
+          +field-text({
+            isTextarea: item.isTextarea,
+            attrs: {
+              placeholder: item.attrs.placeholder,
+              required: true,
+              type: item.attrs.type,
+              minlength: item.attrs.minlength,
+              min: item.attrs.min,
+              pattern: item.attrs.pattern,
+              'data-pristine-required-message': " ",
+              'data-pristine-minlength-message': item.attrs['data-pristine-minlength-message'],
+              'data-pristine-min-message': item.attrs['data-pristine-min-message'],
+              'data-pristine-pattern-message': item.attrs['data-pristine-pattern-message'],
+              "data-number-only": item.attrs['data-number-only'],
+              "data-pristine-email-message": item.attrs["data-pristine-email-message"],
+              "data-pristine-equals-message": item.attrs["data-pristine-email-message"],
+              "data-pristine-equals": item.attrs["data-pristine-equals"]
+            }
+          }).field-text--std
+        +field-checkbox([
+          {
+            title: 'Я соглашаюсь c <a href="page-privacy-policy.html" target="_blank">политикой кофиденциальности.</a>',
+            attrs: {
+              name: 'check',
+              checked: true,
+              required: true,
+            }
+          }
+        ])
+      .modal-one-click__btn-wrap
+        button.btn.btn--dark.modal-one-click__btn(disabled, data-form-btn="") Отправить заявку

@@ -1,5 +1,8 @@
 mixin modal-basket
   +modal({
     id: 'modal-basket',
-    title: 'Корзина'
+    title: 'Корзина <span class="modal__text-basket">7 товаров</span>'
   }).modal-basket
+    +total-amount({
+      hasDelete: true
+    })

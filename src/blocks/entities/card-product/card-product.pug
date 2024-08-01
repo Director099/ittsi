@@ -1,14 +1,51 @@
-mixin card-product({folderImg, img, priceSale, priceCurrent, title})
-  a.card-product(href=pages.catalogSingle.href)&attributes(attributes)
-    .card-product__img
+-
+  const sizeSelect = [
+    {
+      title: 'XS',
+    },
+    {
+      title: 'XL',
+    },
+    {
+      title: 'XXl',
+    },
+  ]
+
+  const countSelect = [
+    {
+      title: '1',
+    },
+    {
+      title: '2',
+    },
+    {
+      title: '3',
+    },
+  ]
+
+
+mixin card-product({folderImg, img, priceSale, priceCurrent, title, hasDelete})
+  .card-product&attributes(attributes)
+    a.card-product__img(href=pages.catalogSingle.href)
       img(src=`img/content/preview-${folderImg}/prev-${img}.jpg` alt=title)
-    section.card-product__info
-      h3.card-product__title
-        span=title
-      .card-product__desc
-        p Размер XS
-        p Кол-во: 2
-      +price({
-        priceSale: priceSale,
-        priceCurrent: priceCurrent
-      }).card-product__price
+    .card-product__row
+      section.card-product__info
+        h3.card-product__title
+          a(href=pages.catalogSingle.href)=title
+        .card-product__desc
+          .card-product__row-text
+            p Размер:
+            +field-select({
+              options: sizeSelect,
+            }).card-product__select
+          .card-product__row-text
+            p Кол-во:
+            +field-select({
+              options: countSelect,
+            }).card-product__select
+        +price({
+          priceSale: priceSale,
+          priceCurrent: priceCurrent
+        }).card-product__price
+      if(!!hasDelete)
+        button(type="button").card-product__delete Удалить

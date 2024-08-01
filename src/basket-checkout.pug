@@ -144,6 +144,11 @@ block content
             name: 'comment',
           }
         }).field-text--std
-    +total-amount.page-checkout__total-amount
+    aside.page-checkout__total-amount
+      +content-block('Итого <span class="page-checkout__sub-title">7 товаров</span>').page-checkout__content-title
+        +total-amount({
+          hasPageBasket: true
+        })
+
 block footer
   +page-footer()

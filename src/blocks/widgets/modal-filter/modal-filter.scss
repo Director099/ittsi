@@ -1,0 +1,66 @@
+.modal-filter {
+  @media (min-width: $screen-lg) {
+    position: fixed;
+    right: 0;
+    left: initial;
+    max-width: 460px;
+    border-radius: 0;
+    padding: 20px;
+  }
+
+  .modal__header {
+    margin-bottom: 0;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .field-checkbox__name-text,
+  .field-radio__name-text {
+    width: auto;
+    height: auto;
+    padding: 7px 15px;
+  }
+}
+
+.modal-filter .modal__close {
+  @media (min-width: $screen-lg) {
+    top: 0px;
+    left: -70px;
+    right: initial;
+  }
+}
+
+.modal-filter__size {
+  display: flex;
+  gap: 16px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.modal-filter__grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+
+  .field-radio__name {
+    width: 100%;
+    height: 100%;
+  }
+
+  .field-radio__name-text {
+    height: 100%;
+  }
+}
+
+.modal-filter__accordion {
+  margin-bottom: 20px;
+}
+
+.modal-filter__btn {
+  padding: 0;
+  border: none;
+  padding-bottom: 2px;
+  border-bottom: 1px dotted #999;
+}

@@ -1,0 +1,32 @@
+include mock
+
+mixin modal-filter
+  +modal({
+    id: 'modal-filter',
+    title: 'Фильтр'
+  }).modal-filter
+    form.modal-filter__form
+      +accordionParent().modal-filter__accordion
+        +accordionItem({
+          title: 'Размер'
+        })
+          +field-checkbox(radioListFilter).field-checkbox--size.modal-filter__size
+        +accordionItem({
+          title: 'Цвет'
+        })
+          .modal-filter__grid
+            each item, i in checkboxListColors
+              +checkbox-color({
+                title: item.title,
+                counter: item.counter,
+                style: item.style
+              })
+        +accordionItem({
+          title: 'Цена'
+        })
+          +range
+        +accordionItem({
+          title: 'Упорядочить'
+        })
+          +field-radio(radioListSort).field-radio--size.modal-filter__grid
+      button.btn.btn--light.modal-filter__btn(type="reset") Сбросить фильтр

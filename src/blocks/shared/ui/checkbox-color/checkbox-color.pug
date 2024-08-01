@@ -1,0 +1,6 @@
+mixin checkbox-color({title, style, counter})
+  label.checkbox-color&attributes(attributes)
+    input.checkbox-color__input(type="checkbox")
+    span.checkbox-color__box(style=style)
+    span.checkbox-color__text= title
+      i.checkbox-color__counter=counter

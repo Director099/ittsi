@@ -33,6 +33,7 @@
 @import "../blocks/shared/ui/table/table";
 @import "../blocks/shared/ui/final-rating/final-rating";
 @import "../blocks/shared/ui/pagination/pagination";
+@import "../blocks/shared/ui/checkbox-color/checkbox-color";
 @import "../blocks/shared/ui/modal/modal";
 
 @import "../blocks/entities/main-nav/main-nav";
@@ -59,6 +60,7 @@
 @import "../blocks/entities/rating-product/rating-product";
 @import "../blocks/entities/choose-stars/choose-stars";
 @import "../blocks/entities/size-table/size-table";
+@import "../blocks/entities/range/range";
 
 @import "../blocks/feature/total-amount/total-amount";
 
@@ -75,6 +77,7 @@
 @import "../blocks/widgets/modal-basket/modal-basket";
 @import "../blocks/widgets/modal-entry/modal-entry";
 @import "../blocks/widgets/modal-one-click/modal-one-click";
+@import "../blocks/widgets/modal-filter/modal-filter";
 
 @import "../blocks/pages/page-catalog/page-catalog";
 @import "../blocks/pages/page-checkout/page-checkout";
@@ -87,4 +90,8 @@
 
 .fancybox__container {
   --fancybox-bg: rgba(0,0,0,.56);
+}
+
+.fancybox__backdrop {
+  backdrop-filter: blur(3px);
 }

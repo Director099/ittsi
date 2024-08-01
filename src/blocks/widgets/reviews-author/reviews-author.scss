@@ -35,7 +35,7 @@
 
 .reviews-author__btn {
   width: 100%;
-  padding: 9.5px;
+  padding: 9.5px 20px;
   border-radius: 0;
   letter-spacing: 2.86px;
   text-transform: uppercase;
@@ -46,6 +46,16 @@
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #e2e4e8;
+}
+
+.reviews-author__header--not-rev {
+  border-bottom: none;
+  margin: 0;
+  padding: 0;
+
+  .reviews-author__btn {
+    width: auto;
+  }
 }
 
 .reviews-author__rating {

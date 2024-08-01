@@ -6,40 +6,34 @@ block header
   +page-header()
 block content
   -
-    const radioList = [
+    const radioListShoes = [
       {
-        title: 'S',
+        title: '36',
         attrs: {
           name: 'btn-size',
           checked: true,
         }
       },
       {
-        title: 'M',
+        title: '37',
         attrs: {
           name: 'btn-size',
         }
       },
       {
-        title: 'L',
+        title: '38',
         attrs: {
           name: 'btn-size',
         }
       },
       {
-        title: 'XL',
+        title: '39',
         attrs: {
           name: 'btn-size',
         }
       },
       {
-        title: 'XXL',
-        attrs: {
-          name: 'btn-size',
-        }
-      },
-      {
-        title: '3XL',
+        title: '48',
         attrs: {
           name: 'btn-size',
         }
@@ -51,20 +45,20 @@ block content
       +breadcrumbs
         +breadcrumbs-item(pages.index.text, pages.index.href)
         +breadcrumbs-item(pages.catalog.text, pages.catalog.href)
-        +breadcrumbs-item('Женская одежда', "#")
-        +breadcrumbs-item(pages.catalogSingle.text)
+        +breadcrumbs-item('Женская обувь', "#")
+        +breadcrumbs-item(pages.catalogSingleShoes.text)
     .catalog-single__stack
       .catalog-single__grid
         .catalog-single__content
           +product-gallery({
-            title: pages.catalogSingle.text,
-            img: 2
+            title: pages.catalogSingleShoes.text,
+            img: 6
           }).catalog-single__product-gallery
         aside.catalog-single__sidebar
           +product-content({
-            title: pages.catalogSingle.text,
-            list: radioList,
-            modalSizeTable: '#modal-size-table'
+            title: pages.catalogSingleShoes.text,
+            list: radioListShoes,
+            modalSizeTable: '#modal-size-table-shoes'
           })
       .catalog-single__grid
         +accordionParent(data-single="").catalog-single__accordion
@@ -96,7 +90,7 @@ block content
           +accordionItem({
             title: 'Отзывы'
           })
-            +reviews-author
+            +reviews-author(true)
         +contact("Нужна помощь? Мы рядом:")
       +block-products({
         title: 'Вас может заинтересовать',

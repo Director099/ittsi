@@ -1,51 +1,55 @@
 include constans
 
-mixin reviews-author()
+mixin reviews-author(hasPreview)
   .reviews-author&attributes(attributes)
-    header.reviews-author__header
+    header.reviews-author__header(class=hasPreview ? "reviews-author__header--not-rev" : '')
       .reviews-author__grid
-        .reviews-author__col
-          +field-select({
-            options: [
-              {
-                title: 'Сначала полезные',
-              },
-              {
-                title: 'Сначала новые',
-              },
-              {
-                title: 'Сначала старые',
-              },
-              {
-                title: 'Сначала с высокой оценкой',
-              },
-              {
-                title: 'Сначала с низкой оценкой',
-              },
-            ],
-          }).reviews-author__select
-        .reviews-author__col.d-none.d-xl-block
+        if(!hasPreview)
+          .reviews-author__col
+            +field-select({
+              options: [
+                {
+                  title: 'Сначала полезные',
+                },
+                {
+                  title: 'Сначала новые',
+                },
+                {
+                  title: 'Сначала старые',
+                },
+                {
+                  title: 'Сначала с высокой оценкой',
+                },
+                {
+                  title: 'Сначала с низкой оценкой',
+                },
+              ],
+            }).reviews-author__select
+        .reviews-author__col(class=hasPreview ? "" : 'd-none d-xl-block')
+          if(hasPreview)
+            p Отзывов пока нет.
           a.btn.btn--dark.reviews-author__btn(href="#modal-review" data-fancybox="") Оставить отзыв
-    .reviews-author__grid
-      .reviews-author__col.order-xl-1
-        +rating-product.reviews-author__rating
-        a.btn.btn--dark.d-xl-none.reviews-author__btn(href="#modal-review" data-fancybox="") Оставить отзыв
-      .reviews-author__col
-        ul.reviews-author__list
-          each item in review
-            li.reviews-author__item
-              +review-content({
-                list: item.list,
-                name: item.name,
-                data: item.data,
-              })
-        .reviews-author__pagination
-          +pagination()
-            +pagination-item('1', '#')
-            +pagination-item('2', '#')
-            +pagination-item('...')
-            +pagination-item('5', '#', true)
-            +pagination-item('6', '#')
+    if(!hasPreview)
+      .reviews-author__grid
+        .reviews-author__col.order-xl-1
+          +rating-product.reviews-author__rating
+          a.btn.btn--dark.d-xl-none.reviews-author__btn(href="#modal-review" data-fancybox="") Оставить отзыв
+        .reviews-author__col
+          ul.reviews-author__list
+            each item in review
+              li.reviews-author__item
+                +review-content({
+                  list: item.list,
+                  name: item.name,
+                  data: item.data,
+                })
+          .reviews-author__pagination
+            +pagination()
+              +pagination-item('1', '#')
+              +pagination-item('2', '#')
+              +pagination-item('...')
+              +pagination-item('5', '#', true)
+              +pagination-item('6', '#')
 
 
 

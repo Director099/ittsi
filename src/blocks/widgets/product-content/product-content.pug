@@ -1,6 +1,4 @@
-include mock
-
-mixin product-content(title)
+mixin product-content({title, list, modalSizeTable})
   .product-content
     .product-content__group
       header.product-content__header
@@ -26,9 +24,9 @@ mixin product-content(title)
             a.product-content__color-link(href="#" style="background-color: #000")
             a.product-content__color-link(href="#" style="background-color: #fff; border-color: #999" )
         .product-content__link-group
-          a.product-content__link-table(href="#modal-size-table" data-fancybox="") Таблица размеров
+          a.product-content__link-table(href=modalSizeTable data-fancybox="") Таблица размеров
         .product-content__size-product
-          +field-radio(radioList).product-content__size-radio.field-radio--size
+          +field-radio(list).product-content__size-radio.field-radio--size
         .product-content__form-btn
           button.btn.btn--dark.product-content__btn-basket В корзину
           a.btn.btn--light.product-content__btn-order(href="#" data-fancybox="") Купить в 1 клик

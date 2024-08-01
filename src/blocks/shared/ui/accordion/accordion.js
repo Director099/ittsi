@@ -155,3 +155,14 @@ export class Accordion {
 }
 
 new Accordion();
+
+//TODO переместить
+Fancybox.bind("[data-src]", {
+  dragToClose: false,
+  on: {
+    done: (fancybox, slide) => {
+      const contentElement = slide.el.lastChild.querySelector('.is-active .accordion__content');
+      contentElement.style.maxHeight = `${contentElement.scrollHeight}px`;
+    },
+  },
+});

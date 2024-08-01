@@ -9,6 +9,7 @@ mixin modal-menu
   }).modal-menu
     +accordion({
       list: accordionFilter,
-    }).filter-accordion
+      firstActive: true,
+    })(data-single="").filter-accordion
     a.modal-menu__user-link(data-fancybox="" href="#modal-entry") Вход/Регистрация
     +contact

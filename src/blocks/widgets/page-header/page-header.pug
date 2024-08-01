@@ -2,7 +2,7 @@ mixin page-header()
   header.page-header
     +logo(pages.index.href).page-header__logo
     .page-header__wrap
-      +burger('меню')(data-fancybox="" data-src="#modal-menu").d-lg-none
+      +burger('меню')(data-src="#modal-menu").d-lg-none
       .page-header__navigation
         +main-nav.page-header__main-nav.d-none.d-lg-flex
         +search-form.page-header__search

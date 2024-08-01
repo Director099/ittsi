@@ -55,14 +55,6 @@ mixin modal-entry()
           }).field-text--std
             if(item.attrs.type === 'password')
               span.field-text__btn-password(aria-label="Показать пароль" data-btn-eye="")
-        +field-checkbox([
-          {
-            title: 'Запомнить меня',
-            attrs: {
-              name: 'check',
-            }
-          },
-        ])
         a.line-link.modal-entry__forgot-psw(data-fancybox-src="#modal-recovery") Забыли пароль?
       .modal-entry__btn-wrap
         button.btn.btn--dark.modal-entry__btn(disabled, data-form-btn="") Войти

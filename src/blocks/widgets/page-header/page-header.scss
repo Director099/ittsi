@@ -29,6 +29,7 @@
 }
 
 .page-header__wrap {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -61,13 +62,17 @@
 }
 
 .page-header__navigation {
-  position: relative;
   display: flex;
   align-items: center;
   flex-grow: 1;
-  padding-right: 40px;
-  margin-left: 27.5px;
+
   height: 100%;
+
+  @media (min-width: $screen-lg) {
+    position: relative;
+    padding-right: 40px;
+    margin-left: 27.5px;
+  }
 }
 
 .page-header__actions {
@@ -92,8 +97,21 @@
 }
 
 .page-header__search {
-  position: absolute;
-  top: 0;
-  right: 0;
+  margin-left: auto;
+
+  @media (max-width: $screen-lg - 1) {
+    &.active {
+      position: absolute;
+      left: 0;
+      right: 0;
+      padding: 0 15px;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 

@@ -59,12 +59,13 @@
   @include ul-none;
 
   position: fixed;
-  top: 60px;
+  top: 93px;
   left: 0;
   width: 100vw;
   height: auto;
   max-height: calc(100vh - 60px);
-  padding-left: 238px;
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: $white;
   transition: height .2s, max-height .2s;
   overflow-x: hidden;
@@ -73,6 +74,11 @@
 
   li:last-child  {
     margin-bottom: 24px;
+  }
+
+  @media (min-width: $screen-lg) {
+    top: 60px;
+    padding-left: 238px;
   }
 }
 

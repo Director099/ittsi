@@ -31,7 +31,7 @@
     right: 0;
     width: 24px;
     height: 1px;
-    background-color: #999;
+    background-color: $color-gray;
   }
 
   &::before {
@@ -45,8 +45,8 @@
 }
 
 .accordion__element {
-  border-top: 1px solid #f7f7f7;
-  border-bottom: 1px solid #f7f7f7;
+  border-top: 1px solid $color-light;
+  border-bottom: 1px solid $color-light;
 }
 
 .accordion__element.is-active .accordion__title::before {

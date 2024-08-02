@@ -14,7 +14,7 @@
 }
 
 .final-rating__star {
-  fill: #999;
+  fill: $color-gray;
 
   &--filled {
     fill: #fabc07;
@@ -23,5 +23,5 @@
 
 .final-rating__data {
   margin: 0;
-  color: #555;
+  color: $color-dark-gray;
 }

@@ -18,7 +18,7 @@
 
 .subscribe__title {
   font-size: 20px;
-  color: #545454;
+  color: $color-dark-gray;
   font-weight: bold;
   line-height: 1.07;
   letter-spacing: 0.7px;
@@ -59,7 +59,7 @@
 .subscribe__field {
   width: 100%;
   height: 100%;
-  border: solid 1px #545454;
+  border: solid 1px $color-dark-gray;
   border-radius: 0;
   background-color: transparent;
   font-size: 15px;
@@ -90,7 +90,7 @@
   transition: $time;
 
   &[disabled] {
-    background-color: #999;
+    background-color: $color-gray;
   }
 
   @media (min-width: $screen-lg) {
@@ -101,7 +101,7 @@
 
 .subscribe__checkbox {
   font-size: 12px;
-  color: #545454; //TODo
+  color: $color-dark-gray;
   line-height: 1.5;
   letter-spacing: 0.3px;
   margin: 0;
@@ -114,7 +114,7 @@
     width: 20px;
     height: 20px;
     background-color: transparent;
-    border: 1px solid #545454; //TODo
+    border: 1px solid $color-dark-gray;
     flex-shrink: 0;
     border-radius: 0;
   }

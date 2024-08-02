@@ -21,7 +21,7 @@
 }
 
 .modal-entry__forgot-psw {
-  color: #999;
+  color: $color-gray;
 }
 
 .modal-entry__btn-wrap {
@@ -58,7 +58,7 @@
   cursor: pointer;
 
   &.active {
-    border-color: #999;
+    border-color: $color-gray;
   }
 
   @media (min-width: $screen-lg) {

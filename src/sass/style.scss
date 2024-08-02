@@ -11,6 +11,8 @@
 @import "../blocks/shared/utils-css/display/display";
 @import "../blocks/shared/utils-css/visibility-hidden/visibility-hidden";
 @import "../blocks/shared/utils-css/has-danger/has-danger";
+@import "../blocks/shared/utils-css/overlay/overlay";
+@import "../blocks/shared/utils-css/fancybox/fancybox";
 @import "../blocks/shared/utils-css/mixins/mixins";
 
 @import "../blocks/shared/ui/page/page";
@@ -82,38 +84,3 @@
 @import "../blocks/pages/page-catalog/page-catalog";
 @import "../blocks/pages/page-checkout/page-checkout";
 @import "../blocks/pages/catalog-single/catalog-single";
-
-//TODO
-.fancybox__content>.f-button.is-close-btn {
-  display: none;
-}
-
-.fancybox__container {
-  --fancybox-bg: rgba(0,0,0,.56);
-}
-
-.fancybox__backdrop {
-  backdrop-filter: blur(3px);
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba($black, 0);
-  transition: .15s linear;
-  backdrop-filter: blur(3px);
-}
-
-.overlay.show {
-  background-color: rgba($black, 0.5);
-}
-
-.page-header {
-  z-index: 105;
-}
-
-

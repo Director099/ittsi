@@ -26,7 +26,6 @@
 }
 
 .tab-filter__header--dropdown {
-  //TODO Данный класс только для мобилки в меню доб.товара
   @media (max-width: $screen-lg - 1) {
     position: relative;
 
@@ -72,7 +71,6 @@
 }
 
 .tab-filter__drop-text {
-  @include ProximaNovaTextRegular16;
   position: relative;
   display: inline-block;
   padding-right: 16px;

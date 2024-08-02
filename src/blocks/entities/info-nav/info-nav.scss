@@ -30,11 +30,11 @@
   padding: 20.5px 15px;
   transition: $time;
   color: inherit;
-  border-top: 1px solid #f7f7f7;
+  border-top: 1px solid $color-light;
 
 
   &:hover,
   &.active {
-    background-color: #f7f7f7;
+    background-color: $color-light;
   }
 }

@@ -1,3 +1,5 @@
+@import "data-has-hover";
+
 .main-nav {
   @include ul-none;
 
@@ -49,11 +51,11 @@
 
 .main-nav__submenu {
   position: fixed;
-  top: 60px; // Todo Переменная
+  top: $lgHeightHeader;
   left: 0;
   display: none;
   width: 100%;
-  max-height: calc(100vh - 60px); // Todo Переменная
+  max-height: calc(100vh - #{$lgHeightHeader});
   background-color: $white;
   overflow-y: auto;
 
@@ -98,6 +100,6 @@
   }
 
   &:hover {
-    color: #999; //Todo цввет
+    color: $color-gray;
   }
 }

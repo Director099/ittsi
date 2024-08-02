@@ -37,7 +37,7 @@
 
 .page-catalog__sidebar {
   position: sticky;
-  top: 60px; //Todo
+  top: $lgHeightHeader;
   left: 0;
 }
 
@@ -58,7 +58,7 @@
 .page-catalog__filter {
   padding-left: 15px;
   padding-right: 15px;
-  border-bottom: 1px solid #f7f7f7;
+  border-bottom: 1px solid $color-light;
 
   @media (min-width: $screen-lg) {
     padding: 0;

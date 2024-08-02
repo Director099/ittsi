@@ -1,3 +1,5 @@
+import scrollLock from "../../../libs/scroll-lock";
+
 export const MediaSize = {
   LG: 1024
 }
@@ -11,11 +13,13 @@ export class ToggleOverlay {
   }
 
   addOverlay() {
+    scrollLock.disablePageScroll();
     document.body.append(this.overlay);
     setTimeout(() => this.overlay.classList.add('show'), 100)
   }
 
   removeOverlay() {
+    scrollLock.enablePageScroll();
     this.overlay.classList.remove('show');
     setTimeout(() => this.overlay.remove(), 100);
   }

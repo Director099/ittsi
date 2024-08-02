@@ -23,7 +23,7 @@
 .catalog-single__sidebar {
   @media (min-width: $screen-lg) {
     position: sticky;
-    top: 70px; //TODO
+    top: calc(#{$lgHeightHeader} + 10px);
     left: 0;
     flex-shrink: 0;
   }

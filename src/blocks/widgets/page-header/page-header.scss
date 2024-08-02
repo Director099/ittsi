@@ -6,7 +6,7 @@
   display: flex;
   flex-wrap: wrap;
   background-color: rgba($white, 97%);
-  z-index: 9;
+  z-index: 105;
 
   &::after {
     display: block;
@@ -16,7 +16,7 @@
     bottom: 0;
     left: 0;
     height: 1px;
-    background-color: #f7f7f7; //Todo цвет
+    background-color: $color-light;
   }
 
   @media (min-width: $screen-lg) {
@@ -24,7 +24,7 @@
     justify-content: space-between;
     flex-wrap: nowrap;
     padding: 0 28px;
-    height: 60px; //TODO в переменную
+    height: $lgHeightHeader;
   }
 }
 
@@ -36,8 +36,8 @@
   width: 100%;
   gap: 22px;
   padding: 7px 15px;
-  border-bottom: 1px solid #f7f7f7;
-  border-top: 1px solid #f7f7f7;
+  border-bottom: 1px solid $color-light;
+  border-top: 1px solid $color-light;
 
   @media (min-width: $screen-lg) {
     gap: 0;

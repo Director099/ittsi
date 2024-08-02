@@ -3,7 +3,7 @@
   width: 100%;
   padding-right: 8px;
   overflow: auto;
-  border-top: 1px solid #e4e4e4;
+  border-top: 1px solid $color-light-gray;
 }
 
 .total-amount__btn {
@@ -18,7 +18,7 @@
 }
 
 .total-amount__footer-text {
-  color: #999;
+  color: $color-gray;
   font-weight: 300;
   font-size: 12px;
   line-height: 20px;
@@ -34,7 +34,7 @@
 
 .total-amount__purchase-total {
   border: none;
-  border-top: 1px solid #e4e4e4;
+  border-top: 1px solid $color-light-gray;
   padding-top: 5px;
   margin-bottom: 8px;
   font-size: 14px;

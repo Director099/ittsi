@@ -6,7 +6,7 @@
 
 .product-content__group:not(:last-child) {
   padding-bottom: 12px;
-  border-bottom: 1px solid #f7f7f7;
+  border-bottom: 1px solid $color-light;
 }
 
 .product-content__form {
@@ -39,7 +39,7 @@
 
 .product-content__link-icon {
   flex-direction: column;
-  color: #999;
+  color: $color-gray;
 
   svg {
     fill: currentColor;
@@ -62,7 +62,7 @@
 }
 
 .product-content__price-text--cut {
-  color: #999;
+  color: $color-gray;
   text-decoration: line-through;
 }
 
@@ -95,7 +95,7 @@
   margin-bottom: 16px;
 
   span {
-    color: #999;
+    color: $color-gray;
   }
 }
 
@@ -125,7 +125,7 @@
 .product-content__link-table {
   border-bottom: 1px dashed #d6d6d6;
   text-transform: uppercase;
-  color: #999;
+  color: $color-gray;
   font-weight: 300;
   font-size: 14px;
   line-height: 1;

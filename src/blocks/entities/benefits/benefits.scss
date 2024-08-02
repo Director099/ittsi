@@ -16,7 +16,7 @@
 
   svg {
     width: 100%;
-    fill: #999;
+    fill: $color-gray;
   }
 }
 
@@ -27,7 +27,7 @@
 .benefits__sub-text {
   display: block;
   margin-bottom: 0;
-  color: #999;
+  color: $color-gray;
   font-size: 12px;
   font-weight: 300;
   line-height: 16px;

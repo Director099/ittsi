@@ -63,7 +63,7 @@ $border-radius:               3px !default;
   }
 
   &--light {
-    border: 1px solid #e4e4e4;
+    border: 1px solid $color-light-gray;
     background-color: $white;
 
     &:hover,
@@ -82,7 +82,7 @@ $border-radius:               3px !default;
     &:hover,
     &:focus {
       background-color: #595959;
-      border-color: #595959; //TOdo Цвет
+      border-color: #595959;
       color: $white;
     }
   }

@@ -28,6 +28,6 @@
   gap: 20px;
   @media (min-width: $screen-xxl) {
     grid-template-columns: 1fr 230px;
-    gap: 60px;
+    gap: $lgHeightHeader;
   }
 }

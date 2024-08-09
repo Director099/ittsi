@@ -45,9 +45,9 @@ class SearchHeader extends ToggleOverlay {
   }
 
   _init() {
-    this.btnFormSearch.addEventListener('click', () => this.showForm());
-    this.overlay.addEventListener('click', () => this.hiddenForm());
-    this.closeSearch.addEventListener('click', () => this.hiddenForm());
+    this.btnFormSearch.addEventListener('click', this.showForm.bind(this));
+    this.overlay.addEventListener('click',  this.hiddenForm.bind(this));
+    this.closeSearch.addEventListener('click', this.hiddenForm.bind(this));
     document.addEventListener('keydown', (evt) => {
       if(evt.key === 'Escape') {
         this.hiddenForm()

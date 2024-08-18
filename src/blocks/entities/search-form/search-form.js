@@ -1,6 +1,6 @@
 import {ToggleOverlay} from "../../shared/utils-js/utils";
 
-const searchForm = new autoComplete({
+new autoComplete({
   selector: "[data-autocomplite]",
   data: {
     src: async () => {
@@ -35,13 +35,13 @@ class SearchHeader extends ToggleOverlay {
 
   hiddenForm() {
     this.formSearch.classList.remove('active');
-    this.removeOverlay();
+    super.removeOverlay();
   }
 
   showForm() {
     this.formSearch.classList.add('active');
     this.formSearch.querySelector('input').focus();
-    this.addOverlay();
+    super.addOverlay();
   }
 
   _init() {

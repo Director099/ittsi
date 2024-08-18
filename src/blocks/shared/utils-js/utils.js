@@ -9,18 +9,24 @@ export class ToggleOverlay {
     this.overlay = document.createElement('div');
     this.overlay.classList.add('overlay');
 
-    this.overlay.addEventListener('click', () => this.removeOverlay());
+    this.overlay.addEventListener('click', this.removeOverlay.bind(this));
   }
 
   addOverlay() {
-    scrollLock.disablePageScroll();
-    document.body.append(this.overlay);
-    setTimeout(() => this.overlay.classList.add('show'), 100)
+    if (!document.body.contains(this.overlay)) {
+      scrollLock.disablePageScroll();
+      document.body.append(this.overlay);
+      setTimeout(() => this.overlay.classList.add('show'), 100)
+    }
   }
 
   removeOverlay() {
     scrollLock.enablePageScroll();
     this.overlay.classList.remove('show');
     setTimeout(() => this.overlay.remove(), 100);
+  }
+
+  isOverlayVisible() {
+    return this.overlay.classList.contains('show');
   }
 }

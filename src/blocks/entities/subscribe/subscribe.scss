@@ -16,13 +16,24 @@
   }
 }
 
+.subscribe__gap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+
+  @media (min-width: $screen-lg) {
+    align-items: flex-start;
+  }
+}
+
 .subscribe__title {
   font-size: 20px;
   color: $color-dark-gray;
   font-weight: bold;
   line-height: 1.07;
   letter-spacing: 0.7px;
-  margin-bottom: 16px;
+  margin-bottom: 0px;
 }
 
 .subscribe__desc {

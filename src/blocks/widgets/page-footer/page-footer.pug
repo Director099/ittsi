@@ -3,11 +3,6 @@ include ./constans
 mixin page-footer()
   footer.page-footer
     .page-footer__container
-      .page-footer__grid-available
-        .page-footer__col
-          +socials
-        .page-footer__col
-          +payment
       +subscribe.page-footer__subscribe
       .page-footer__nav(data-accordion="parent" data-single="" data-destroy="(max-width: 1023px)")
         each item in footerNav

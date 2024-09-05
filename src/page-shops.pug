@@ -14,8 +14,18 @@ block content
     +info-nav.d-none.d-lg-block
     .info-page__content
       +content-block('Уфа')
-        p #[strong АДРЕС:] Уфа, проспект Октября 4/1,  ЦТиР «МИР», 2 УРОВЕНЬ, Южная галерея
-        p #[strong ГРАФИК РАБОТЫ:] ПН - ВС  10:00 - 23:00
-        p #[strong ТЕЛЕФОН:] #[a(href="tel:+7(906)370-32-27") +7 (906) 370-32-27]
+        +accordionParent()
+          +accordionItem({
+            title: 'ЦТиР «МИР»'
+          })
+            p #[strong АДРЕС:] Уфа, проспект Октября 4/1,  ЦТиР «МИР», 2 УРОВЕНЬ, Южная галерея
+            p #[strong ГРАФИК РАБОТЫ:] ПН - ВС  10:00 - 23:00
+            p #[strong ТЕЛЕФОН:] #[a(href="tel:+7(906)370-32-27") +7 (906) 370-32-27]
+          +accordionItem({
+            title: 'ТЦ МЕГА'
+          })
+            p #[strong АДРЕС:] Уфа, Рубежная ул., 174, ТЦ МЕГА
+            p #[strong ГРАФИК РАБОТЫ:] ПН - ВС  10:00 - 23:00
+            p #[strong ТЕЛЕФОН:] #[a(href="tel:+7(906)370-32-27") +7 (906) 370-32-27]
 block footer
   +page-footer()

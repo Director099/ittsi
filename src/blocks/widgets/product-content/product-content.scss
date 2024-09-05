@@ -113,7 +113,7 @@
   border: 1px solid transparent;
 
   &.active {
-    box-shadow: 0 0 0 2px inset $black;
+    box-shadow: 0 0 0 1px inset $black;
     border-color: $black;
   }
 }

@@ -83,6 +83,10 @@
   font-weight: 300;
   transition: color $time;
 
+  &--sale {
+    color: #262c56;
+  }
+
   &--head {
     margin-bottom: 16px;
     font-size: 13px;
